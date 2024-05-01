@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e10610c5-4045-4223-aa31-f29f8e606629" name="Changes" comment="first code commit">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/seleniumhq_selenium_java.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/city_code.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ReportPage/ReportPageHSH.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ReportPage/ReportPageTPH.java" afterDir="false" />
+    <list default="true" id="e10610c5-4045-4223-aa31-f29f8e606629" name="Changes" comment="add city_code.json">
+      <change afterPath="$PROJECT_DIR$/src/appWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TTVRIT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TTVRIT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taiwan Traffic Violation Reporting Integration Tool (TTVRIT)" beforeDir="false" afterPath="$PROJECT_DIR$/Taiwan Traffic Violation Reporting Integration Tool (TTVRIT)" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +106,7 @@
       <workItem from="1714544285628" duration="161000" />
       <workItem from="1714544676840" duration="2405000" />
       <workItem from="1714548723573" duration="776000" />
-      <workItem from="1714575999701" duration="2581000" />
+      <workItem from="1714575999701" duration="3951000" />
     </task>
     <task id="LOCAL-00001" summary="first code commit">
       <created>1713337402023</created>
@@ -119,7 +115,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713337402023</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="create first reportPage(HSH)">
+      <option name="closed" value="true" />
+      <created>1714579489699</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714579489699</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add city_code.json">
+      <option name="closed" value="true" />
+      <created>1714579507482</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714579507482</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +139,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first code commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first code commit" />
+    <MESSAGE value="create first reportPage(HSH)" />
+    <MESSAGE value="add city_code.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="add city_code.json" />
   </component>
 </project>
