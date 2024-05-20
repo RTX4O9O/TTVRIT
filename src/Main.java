@@ -1,10 +1,8 @@
-import ReportPage.ReportPageHSH;
-
-
+import org.openqa.selenium.edge.EdgeDriver;
 
 public class Main {
     public static void main(String[] args) {
-        APPWindow appwindow = new APPWindow();
+        MainWindow appwindow = new MainWindow();
 
 
     }

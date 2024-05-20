@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e10610c5-4045-4223-aa31-f29f8e606629" name="Changes" comment="add city_code.json">
-      <change afterPath="$PROJECT_DIR$/src/appWindow.java" afterDir="false" />
+    <list default="true" id="e10610c5-4045-4223-aa31-f29f8e606629" name="Changes" comment="add frame (APPWindow.java)">
+      <change afterPath="$PROJECT_DIR$/src/Profiles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Taiwan Traffic Violation Reporting Integration Tool (TTVRIT)" beforeDir="false" afterPath="$PROJECT_DIR$/Taiwan Traffic Violation Reporting Integration Tool (TTVRIT)" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/APPWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +62,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/RTXs Lab/git/RhymeSann&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/RTXs Lab/git/Microsoft-Rewards-Farmer&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -106,7 +107,14 @@
       <workItem from="1714544285628" duration="161000" />
       <workItem from="1714544676840" duration="2405000" />
       <workItem from="1714548723573" duration="776000" />
-      <workItem from="1714575999701" duration="3951000" />
+      <workItem from="1714575999701" duration="7277000" />
+      <workItem from="1714660426630" duration="16000" />
+      <workItem from="1714663783805" duration="5043000" />
+      <workItem from="1714977817169" duration="209000" />
+      <workItem from="1715612757356" duration="10000" />
+      <workItem from="1715612785708" duration="8000" />
+      <workItem from="1715612804588" duration="8000" />
+      <workItem from="1716015979830" duration="709000" />
     </task>
     <task id="LOCAL-00001" summary="first code commit">
       <created>1713337402023</created>
@@ -131,7 +139,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714579507482</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update project file">
+      <option name="closed" value="true" />
+      <created>1714583716367</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714583716367</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add frame (APPWindow.java)">
+      <option name="closed" value="true" />
+      <created>1714583744579</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714583744579</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +165,8 @@
     <MESSAGE value="first code commit" />
     <MESSAGE value="create first reportPage(HSH)" />
     <MESSAGE value="add city_code.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="add city_code.json" />
+    <MESSAGE value="update project file" />
+    <MESSAGE value="add frame (APPWindow.java)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add frame (APPWindow.java)" />
   </component>
 </project>
