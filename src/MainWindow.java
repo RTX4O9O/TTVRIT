@@ -10,7 +10,7 @@ public class MainWindow extends JFrame {
         this.setTitle("Taiwan Traffic Violation Reporting Integration Tool (TTVRIT) <alpha>");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLayout(null);
-        this.setSize(500, 500);
+        this.setSize(800, 600);
 
         reportPage();
         profilePage();
@@ -27,7 +27,6 @@ public class MainWindow extends JFrame {
 
 
 
-        this.pack();
         this.setVisible(true);
     }
 
@@ -40,15 +39,16 @@ public class MainWindow extends JFrame {
     }
     void profilePage() {
         profilePage.setLayout(new GridLayout(1, 2, 5, 5));
-
+        profilePage.setSize(800, 600);
 
         //left part
         JPanel createProfiles = new JPanel();
+        createProfiles.setLayout(new FlowLayout());
+        createProfiles.setSize(new Dimension(400, 600));
         {
-            createProfiles.setLayout(new GridLayout(3, 1));
-
             //upper part
             JPanel personalInfoInput = new JPanel();
+            personalInfoInput.setSize(400, 400);
             {
 
                 personalInfoInput.setLayout(new GridLayout(5, 2, 0, 2));
@@ -76,7 +76,9 @@ public class MainWindow extends JFrame {
             }
 
             JLabel hintLabel = new JLabel();
+            hintLabel.setSize(400, 100);
             JButton createProfileButton = new JButton("新增");
+            createProfileButton.setSize(400, 100);
 
             createProfiles.add(personalInfoInput);
             createProfiles.add(hintLabel);
@@ -85,8 +87,14 @@ public class MainWindow extends JFrame {
 
         //right part
         JPanel existedProfiles = new JPanel();
+        existedProfiles.setSize(400, 600);
         {
 
         }
+
+        profilePage.add(createProfiles);
+        profilePage.add(existedProfiles);
+        profilePage.setBackground(Color.black);
+        profilePage.setVisible(true);
     }
 }
