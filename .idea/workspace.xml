@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e10610c5-4045-4223-aa31-f29f8e606629" name="Changes" comment="add frame (APPWindow.java)">
-      <change afterPath="$PROJECT_DIR$/src/Profiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/APPWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="e10610c5-4045-4223-aa31-f29f8e606629" name="Changes" comment="forgor 💀" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,6 +110,7 @@
       <workItem from="1715612785708" duration="8000" />
       <workItem from="1715612804588" duration="8000" />
       <workItem from="1716015979830" duration="709000" />
+      <workItem from="1716184790521" duration="849000" />
     </task>
     <task id="LOCAL-00001" summary="first code commit">
       <created>1713337402023</created>
@@ -155,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714583744579</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="forgor 💀">
+      <option name="closed" value="true" />
+      <created>1716185014615</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716185014615</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +171,7 @@
     <MESSAGE value="add city_code.json" />
     <MESSAGE value="update project file" />
     <MESSAGE value="add frame (APPWindow.java)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add frame (APPWindow.java)" />
+    <MESSAGE value="forgor " />
+    <option name="LAST_COMMIT_MESSAGE" value="forgor " />
   </component>
 </project>
