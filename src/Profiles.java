@@ -1,6 +1,7 @@
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -10,15 +11,15 @@ import java.util.Map;
 
 public class Profiles {
 
-
     public Map<String, Profile> savedProfiles() {
         Map<String, Profile> profiles;
         Gson gson = new Gson();
-        File jsonProfiles = new File(System.getProperty("user.home") + "TTVRIT/profiles.json");
+        File jsonProfiles = new File(System.getProperty("user.home") + "/TTVRIT/profiles.json");
 
         if (jsonProfiles.exists()) {
             try {
-                Type type = new TypeToken<Map<String, Profile>>(){}.getType();
+                Type type = new TypeToken<Map<String, Profile>>() {
+                }.getType();
                 profiles = gson.fromJson(new FileReader(jsonProfiles), type);
 
                 // 現在，profiles 是一個 Map，其中包含了所有的個人資料
@@ -29,13 +30,22 @@ public class Profiles {
                 Notify.error(e.getMessage());
                 profiles = new HashMap<>();
             }
-        } else {
+        } else if (jsonProfiles.getParentFile().exists()) {
             try {
                 jsonProfiles.createNewFile();
             } catch (IOException e) {
                 Notify.error(e.getMessage());
                 throw new RuntimeException(e);
 
+            }
+            profiles = new HashMap<>();
+        } else {
+            jsonProfiles.getParentFile().mkdir();
+            try {
+                jsonProfiles.createNewFile();
+            } catch (IOException e) {
+                Notify.error(e.getMessage());
+                throw new RuntimeException(e);
             }
             profiles = new HashMap<>();
         }
