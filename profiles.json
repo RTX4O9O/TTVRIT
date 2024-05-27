@@ -6,18 +6,17 @@
     "number": "電話號碼",
     "email": "電子郵件"
   },
-    "範例": {
-        "name": "王小明",
-        "id": "A123456789",
-        "address": "台北市中正區重慶南路一段122號",
-        "number": "0900000000",
-        "email": "example@email.tw"
-    },
-    "profile": {
-        "name": "全名",
-        "id": "",
-        "address": "",
-        "number": ""
-}
-
+  "範例": {
+    "name": "王小明",
+    "id": "A123456789",
+    "address": "台北市中正區重慶南路一段122號",
+    "number": "0900000000",
+    "email": "example@email.tw"
+  },
+  "profile": {
+    "name": "全名",
+    "id": "",
+    "address": "",
+    "number": ""
   }
+}
