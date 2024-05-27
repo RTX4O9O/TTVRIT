@@ -14,9 +14,10 @@
     "email": "example@email.tw"
   },
   "profile": {
-    "name": "全名",
+    "name": "",
     "id": "",
     "address": "",
-    "number": ""
+    "number": "",
+    "email": ""
   }
 }
