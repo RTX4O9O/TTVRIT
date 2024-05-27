@@ -9,14 +9,14 @@ public class MainWindow extends JFrame {
     MainWindow() {
         this.setTitle("Taiwan Traffic Violation Reporting Integration Tool (TTVRIT) <alpha>");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setLayout(null);
+        this.setLayout(new BorderLayout());
         this.setSize(800, 600);
 
         reportPage();
         profilePage();
 
 
-        this.add(profilePage);
+        this.add(profilePage, BorderLayout.CENTER);
 
 
         this.setVisible(true);
