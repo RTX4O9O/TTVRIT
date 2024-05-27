@@ -1,10 +1,20 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class MainWindow extends JFrame {
+public class MainWindow extends JFrame implements ActionListener {
     JPanel reportPage = new JPanel();
     JPanel profilePage = new JPanel();
     Profiles profilesInstance = new Profiles();
+    JButton createProfileButton;
+    JTextField profileNicknameField;
+    JTextField nameField;
+    JTextField idField;
+    JTextField emailField;
+    JTextField phoneField;
+    JTextField addressField;
+    JLabel hintLabel;
 
     MainWindow() {
         this.setTitle("Taiwan Traffic Violation Reporting Integration Tool (TTVRIT) <alpha>");
@@ -24,7 +34,6 @@ public class MainWindow extends JFrame {
 
     void reportPage() {
         reportPage.setLayout(new FlowLayout());
-
 
     }
 
@@ -48,17 +57,19 @@ public class MainWindow extends JFrame {
                 JPanel fieldsPanel = new JPanel();
                 fieldsPanel.setLayout(new GridBagLayout());
 
+                JLabel profileNicknameLabel = new JLabel("檔案名稱");
                 JLabel nameLabel = new JLabel("姓名");
                 JLabel idLabel = new JLabel("身分證字號");
                 JLabel emailLabel = new JLabel("電子郵件");
                 JLabel phoneLabel = new JLabel("電話號碼");
                 JLabel addressLabel = new JLabel("聯絡地址");
 
-                JTextField nameField = new JTextField();
-                JTextField idField = new JTextField();
-                JTextField emailField = new JTextField();
-                JTextField phoneField = new JTextField();
-                JTextField addressField = new JTextField();
+                profileNicknameField = new JTextField();
+                nameField = new JTextField();
+                idField = new JTextField();
+                emailField = new JTextField();
+                phoneField = new JTextField();
+                addressField = new JTextField();
 
                 gbc.weighty = 0.2;
                 gbc.fill = GridBagConstraints.BOTH;
@@ -68,26 +79,30 @@ public class MainWindow extends JFrame {
                 gbc.gridx = 0;
                 gbc.gridy = 0;
                 gbc.weightx = 0.3; // Set weightx to 0.3 for labels
-                labelsPanel.add(nameLabel, gbc);
+                labelsPanel.add(profileNicknameLabel, gbc);
                 gbc.gridy = 1;
-                labelsPanel.add(idLabel, gbc);
+                labelsPanel.add(nameLabel, gbc);
                 gbc.gridy = 2;
-                labelsPanel.add(emailLabel, gbc);
+                labelsPanel.add(idLabel, gbc);
                 gbc.gridy = 3;
-                labelsPanel.add(phoneLabel, gbc);
+                labelsPanel.add(emailLabel, gbc);
                 gbc.gridy = 4;
+                labelsPanel.add(phoneLabel, gbc);
+                gbc.gridy = 5;
                 labelsPanel.add(addressLabel, gbc);
 
                 gbc.gridy = 0;
                 gbc.weightx = 0.7; // Set weightx to 0.7 for fields
-                fieldsPanel.add(nameField, gbc);
+                fieldsPanel.add(profileNicknameField, gbc);
                 gbc.gridy = 1;
-                fieldsPanel.add(idField, gbc);
+                fieldsPanel.add(nameField, gbc);
                 gbc.gridy = 2;
-                fieldsPanel.add(emailField, gbc);
+                fieldsPanel.add(idField, gbc);
                 gbc.gridy = 3;
-                fieldsPanel.add(phoneField, gbc);
+                fieldsPanel.add(emailField, gbc);
                 gbc.gridy = 4;
+                fieldsPanel.add(phoneField, gbc);
+                gbc.gridy = 5;
                 fieldsPanel.add(addressField, gbc);
 
                 gbc.gridx = 0;
@@ -99,10 +114,11 @@ public class MainWindow extends JFrame {
                 personalInfoInput.add(fieldsPanel, gbc);
             }
 
-            JLabel hintLabel = new JLabel("hello world, im the hint");
+            hintLabel = new JLabel("hello world, im the hint");
             hintLabel.setHorizontalAlignment(JLabel.CENTER);
 
-            JButton createProfileButton = new JButton("新增");
+            createProfileButton = new JButton("新增");
+            createProfileButton.addActionListener(this);
 
             //button blank
             JPanel buttonLeftBlankPanel = new JPanel();
@@ -207,4 +223,37 @@ public class MainWindow extends JFrame {
 
 
     }
+
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == createProfileButton) {
+            if (allTextfieldFilled()) {
+                hintLabel.setText("新增成功");
+                nameField.setText("");
+                idField.setText("");
+                emailField.setText("");
+                phoneField.setText("");
+                addressField.setText("");
+
+            } else {
+                if (nameField.getText().equals("")) {
+                    hintLabel.setText("請輸入姓名");
+                } else if (idField.getText().equals("")) {
+                    hintLabel.setText("請輸入身分證字號");
+                } else if (emailField.getText().equals("")) {
+                    hintLabel.setText("請輸入電子郵件");
+                } else if (phoneField.getText().equals("")) {
+                    hintLabel.setText("請輸入電話號碼");
+                } else if (addressField.getText().equals("")) {
+                    hintLabel.setText("請輸入聯絡地址");
+                }
+            }
+        }
+    }
+
+    boolean allTextfieldFilled() {
+        return !nameField.getText().equals("") && !idField.getText().equals("") && !emailField.getText().equals("") && !phoneField.getText().equals("") && !addressField.getText().equals("");
+    }
+
 }
