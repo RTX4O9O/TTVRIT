@@ -147,39 +147,40 @@ public class MainWindow extends JFrame {
             existedProfilesPanel.setLayout(new GridLayout(64, 1, 0, 2));
             // create panel for existed profiles
             {
+                if (profilesInstance.savedProfiles() != null) {
+                    for (String key : profilesInstance.savedProfiles().keySet()) {
+                        JPanel jPanel = new JPanel();
+                        jPanel.setName(key);
+                        jPanel.setLayout(new GridBagLayout());
+                        gbc.fill = GridBagConstraints.HORIZONTAL;
 
-                for (String key : profilesInstance.savedProfiles().keySet()) {
-                    JPanel jPanel = new JPanel();
-                    jPanel.setName(key);
-                    jPanel.setLayout(new GridBagLayout());
-                    gbc.fill = GridBagConstraints.HORIZONTAL;
+                        //add label
+                        JLabel nameLabel = new JLabel(key);
+                        gbc.gridx = 0;
+                        gbc.gridy = 0;
+                        gbc.gridwidth = 4;
+                        gbc.weightx = 0.4;
+                        jPanel.add(nameLabel, gbc);
 
-                    //add label
-                    JLabel nameLabel = new JLabel(key);
-                    gbc.gridx = 0;
-                    gbc.gridy = 0;
-                    gbc.gridwidth = 4;
-                    gbc.weightx = 0.4;
-                    jPanel.add(nameLabel, gbc);
+                        //add buttons
+                        JButton deleteButton = new JButton("刪除");
+                        deleteButton.setBackground(Color.RED);
+                        gbc.gridx = 4;
+                        gbc.gridwidth = 1;
+                        gbc.weightx = 0.1;
+                        jPanel.add(deleteButton, gbc);
 
-                    //add buttons
-                    JButton deleteButton = new JButton("刪除");
-                    deleteButton.setBackground(Color.RED);
-                    gbc.gridx = 4;
-                    gbc.gridwidth = 1;
-                    gbc.weightx = 0.1;
-                    jPanel.add(deleteButton, gbc);
+                        JButton useButton = new JButton("使用");
+                        useButton.setBackground(Color.GREEN);
+                        gbc.gridx = 5;
+                        gbc.gridwidth = 1;
+                        gbc.weightx = 0.1;
+                        jPanel.add(useButton, gbc);
 
-                    JButton useButton = new JButton("使用");
-                    useButton.setBackground(Color.GREEN);
-                    gbc.gridx = 5;
-                    gbc.gridwidth = 1;
-                    gbc.weightx = 0.1;
-                    jPanel.add(useButton, gbc);
+                        existedProfilesPanel.add(jPanel);
+                    }
 
-                    existedProfilesPanel.add(jPanel);
                 }
-
                 //add panels to scroll area
 
             }
