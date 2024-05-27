@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e10610c5-4045-4223-aa31-f29f8e606629" name="Changes" comment="add MainWindow.reportPage">
-      <change afterPath="$PROJECT_DIR$/profiles.json" afterDir="false" />
+    <list default="true" id="e10610c5-4045-4223-aa31-f29f8e606629" name="Changes" comment="add Notify.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TTVRIT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TTVRIT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,12 +29,12 @@
     &quot;assignee&quot;: &quot;RTX4O9O&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/RTX4O9O/TTVRIT.git&quot;,
-    &quot;accountId&quot;: &quot;564180a7-2d36-431a-84bb-ad7d8c21e0ef&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/RTX4O9O/TTVRIT.git",
+    "accountId": "e58638a1-384a-4d56-b13f-3ab95ed47f0b"
   }
-}</component>
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -72,6 +69,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -92,8 +90,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
       </set>
     </attachedChunks>
   </component>
@@ -121,7 +119,11 @@
       <workItem from="1716355697371" duration="8374000" />
       <workItem from="1716559726694" duration="1041000" />
       <workItem from="1716628959801" duration="3021000" />
-      <workItem from="1716785416685" duration="366000" />
+      <workItem from="1716785416685" duration="984000" />
+      <workItem from="1716787070587" duration="65000" />
+      <workItem from="1716787144348" duration="1063000" />
+      <workItem from="1716788232350" duration="31000" />
+      <workItem from="1716788283683" duration="81000" />
     </task>
     <task id="LOCAL-00001" summary="first code commit">
       <created>1713337402023</created>
@@ -178,7 +180,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716559776711</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add example profiles.json">
+      <option name="closed" value="true" />
+      <created>1716785854850</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716785854850</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add Notify.java">
+      <option name="closed" value="true" />
+      <created>1716788327152</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716788327152</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +210,8 @@
     <MESSAGE value="add frame (APPWindow.java)" />
     <MESSAGE value="add profile panel for frame" />
     <MESSAGE value="add MainWindow.reportPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="add MainWindow.reportPage" />
+    <MESSAGE value="add example profiles.json" />
+    <MESSAGE value="add Notify.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Notify.java" />
   </component>
 </project>

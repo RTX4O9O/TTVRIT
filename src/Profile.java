@@ -1,7 +1,8 @@
+import java.io.File;
 import java.io.Serializable;
 
-// written by chatGPT
-public class Profile implements Serializable {
+
+public class Profile {
     private String name;
     private String id;
     private String address;
@@ -36,8 +37,5 @@ public class Profile implements Serializable {
         return email;
     }
 
-    @Override
-    public String toString() {
-        return name + " (" + id + ")";
-    }
+
 }
