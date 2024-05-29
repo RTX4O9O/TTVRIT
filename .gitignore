@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -13,17 +11,6 @@ target/
 *.iws
 *.iml
 *.ipr
-=======
-=======
->>>>>>> origin/main
-### IntelliJ IDEA ###
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> origin/main
 
 ### Eclipse ###
 .apt_generated
@@ -33,18 +20,6 @@ out/
 .settings
 .springBeans
 .sts4-cache
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
->>>>>>> origin/main
-=======
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
->>>>>>> origin/main
 
 ### NetBeans ###
 /nbproject/private/
@@ -52,15 +27,9 @@ bin/
 /dist/
 /nbdist/
 /.nb-gradle/
-<<<<<<< HEAD
-<<<<<<< HEAD
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/main
 
 ### VS Code ###
 .vscode/
