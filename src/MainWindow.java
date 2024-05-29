@@ -21,6 +21,7 @@ public class MainWindow extends JFrame implements ActionListener {
     JTextField phoneField;
     JTextField addressField;
     JLabel hintLabel;
+    JPanel existedProfilesPanel;
 
     MainWindow() {
         this.setTitle("Taiwan Traffic Violation Reporting Integration Tool (TTVRIT) <alpha>");
@@ -44,7 +45,7 @@ public class MainWindow extends JFrame implements ActionListener {
     }
 
     void profilePage() {
-        profilePage.setLayout(new GridBagLayout());
+        profilePage.setLayout(new GridLayout(1, 2, 0, 0));
         profilePage.setSize(800, 600);
         GridBagConstraints gbc = new GridBagConstraints();
 
@@ -166,7 +167,7 @@ public class MainWindow extends JFrame implements ActionListener {
         JScrollPane scrollPane;
         {
             //https://youtu.be/OJSAnlzXRDk
-            JPanel existedProfilesPanel = new JPanel();
+            existedProfilesPanel = new JPanel();
             existedProfilesPanel.setLayout(new GridLayout(64, 1, 0, 2));
             // create panel for existed profiles
             {
@@ -212,17 +213,17 @@ public class MainWindow extends JFrame implements ActionListener {
         existedProfiles.add(scrollPane);
         existedProfiles.setBorder(BorderFactory.createLineBorder(Color.white, 5));
 
-        gbc.gridy = 0;
+        /*gbc.gridy = 0;
         gbc.gridheight = 1;
         gbc.gridwidth = 1;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.weightx = 0.5; // Set weightx to 0.5
-        gbc.weighty = 1; // Set weighty to 1
+        gbc.weighty = 1; // Set weighty to 1*/
 
 
-        gbc.gridx = 0;
-        profilePage.add(createProfiles, gbc);
-        gbc.gridx = 1;
+        //gbc.gridx = 0;
+        profilePage.add(createProfiles);
+        //gbc.gridx = 1;
         profilePage.add(scrollPane, gbc);
 
         profilePage.setBackground(Color.black);
@@ -256,19 +257,19 @@ public class MainWindow extends JFrame implements ActionListener {
                 addressField.setText("");
 
             } else {
-                if (nameField.getText().equals("")) {
+                if (nameField.getText().isEmpty()) {
                     hintLabel.setText("請輸入姓名");
                     hintLabel.setVisible(true);
-                } else if (idField.getText().equals("")) {
+                } else if (idField.getText().isEmpty()) {
                     hintLabel.setText("請輸入身分證字號");
                     hintLabel.setVisible(true);
-                } else if (emailField.getText().equals("")) {
+                } else if (emailField.getText().isEmpty()) {
                     hintLabel.setText("請輸入電子郵件");
                     hintLabel.setVisible(true);
-                } else if (phoneField.getText().equals("")) {
+                } else if (phoneField.getText().isEmpty()) {
                     hintLabel.setText("請輸入電話號碼");
                     hintLabel.setVisible(true);
-                } else if (addressField.getText().equals("")) {
+                } else if (addressField.getText().isEmpty()) {
                     hintLabel.setText("請輸入聯絡地址");
                     hintLabel.setVisible(true);
                 }
@@ -278,11 +279,11 @@ public class MainWindow extends JFrame implements ActionListener {
     }
 
     boolean allTextfieldFilled() {
-        return !nameField.getText().equals("") && !idField.getText().equals("") && !emailField.getText().equals("") && !phoneField.getText().equals("") && !addressField.getText().equals("");
+        return !nameField.getText().isEmpty() && !idField.getText().isEmpty() && !emailField.getText().isEmpty() && !phoneField.getText().isEmpty() && !addressField.getText().isEmpty();
     }
 
     void addProfile(Profile profile, String nickname) {
-        if (nickname.equals("")) {
+        if (nickname.isEmpty()) {
             int profileCount = profilesInstance.savedProfiles().size();
             nickname = "Profile " + profileCount;
         }
@@ -299,6 +300,50 @@ public class MainWindow extends JFrame implements ActionListener {
             e.printStackTrace();
             Notify.error(e.getMessage());
         }
-
+        updateExistedProfilesPanel();
     }
+
+    void updateExistedProfilesPanel() {
+        // Clear all components from the panel
+        existedProfilesPanel.removeAll();
+
+        // Add all profiles to the panel
+        for (String key : profilesInstance.savedProfiles().keySet()) {
+            JPanel jPanel = new JPanel();
+            jPanel.setName(key);
+            jPanel.setLayout(new GridBagLayout());
+            GridBagConstraints gbc = new GridBagConstraints();
+            gbc.fill = GridBagConstraints.HORIZONTAL;
+
+            // Add label
+            JLabel nameLabel = new JLabel(key);
+            gbc.gridx = 0;
+            gbc.gridy = 0;
+            gbc.gridwidth = 4;
+            gbc.weightx = 0.4;
+            jPanel.add(nameLabel, gbc);
+
+            // Add buttons
+            JButton deleteButton = new JButton("刪除");
+            deleteButton.setBackground(Color.RED);
+            gbc.gridx = 4;
+            gbc.gridwidth = 1;
+            gbc.weightx = 0.1;
+            jPanel.add(deleteButton, gbc);
+
+            JButton useButton = new JButton("使用");
+            useButton.setBackground(Color.GREEN);
+            gbc.gridx = 5;
+            gbc.gridwidth = 1;
+            gbc.weightx = 0.1;
+            jPanel.add(useButton, gbc);
+
+            existedProfilesPanel.add(jPanel);
+        }
+
+        // Refresh the panel
+        existedProfilesPanel.revalidate();
+        existedProfilesPanel.repaint();
+    }
+
 }
