@@ -1,6 +1,6 @@
 package me.rtx4090;
 
-import me.rtx4090.GUI.MainWindow;
+import me.rtx4090.gui.MainWindow;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,5 +9,3 @@ public class Main {
 
     }
 }
-
-

@@ -2,7 +2,7 @@ package me.rtx4090;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import me.rtx4090.GUI.Notify;
+import me.rtx4090.gui.Notify;
 
 import java.io.File;
 import java.io.FileReader;

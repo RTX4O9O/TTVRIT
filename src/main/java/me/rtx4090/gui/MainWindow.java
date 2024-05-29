@@ -1,22 +1,16 @@
-package me.rtx4090.GUI;
+package me.rtx4090.gui;
 
-import com.google.gson.Gson;
-import me.rtx4090.Profile;
-import me.rtx4090.Profiles;
+import me.rtx4090.gui.tabs.profile.ProfilePage;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Map;
 
-public class MainWindow extends JFrame implements ActionListener {
+public class MainWindow extends JFrame {
     JPanel reportPage = new JPanel();
-    JPanel profilePage = new JPanel();
-    Profiles profilesInstance = new Profiles();
+    ProfilePage profilePage = new ProfilePage();
+    JPanel profilePanel = profilePage.profilePanel;
+
+/*    Profiles profilesInstance = new Profiles();
     JButton createProfileButton;
     JTextField profileNicknameField;
     JTextField nameField;
@@ -25,7 +19,7 @@ public class MainWindow extends JFrame implements ActionListener {
     JTextField phoneField;
     JTextField addressField;
     JLabel hintLabel;
-    JPanel existedProfilesPanel;
+    JPanel existedProfilesPanel;*/
 
     public MainWindow() {
         this.setTitle("Taiwan Traffic Violation Reporting Integration Tool (TTVRIT) <alpha>");
@@ -34,10 +28,10 @@ public class MainWindow extends JFrame implements ActionListener {
         this.setSize(800, 600);
 
         reportPage();
-        profilePage();
 
 
-        this.add(profilePage, BorderLayout.CENTER);
+
+        this.add(profilePanel, BorderLayout.CENTER);
 
 
         this.setVisible(true);
@@ -48,7 +42,7 @@ public class MainWindow extends JFrame implements ActionListener {
 
     }
 
-    void profilePage() {
+/*    void profilePage() {
         profilePage.setLayout(new GridLayout(1, 2, 0, 0));
         profilePage.setSize(800, 600);
         GridBagConstraints gbc = new GridBagConstraints();
@@ -219,12 +213,12 @@ public class MainWindow extends JFrame implements ActionListener {
         existedProfiles.add(scrollPane);
         existedProfiles.setBorder(BorderFactory.createLineBorder(Color.white, 5));
 
-        /*gbc.gridy = 0;
+        *//*gbc.gridy = 0;
         gbc.gridheight = 1;
         gbc.gridwidth = 1;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.weightx = 0.5; // Set weightx to 0.5
-        gbc.weighty = 1; // Set weighty to 1*/
+        gbc.weighty = 1; // Set weighty to 1*//*
 
 
         //gbc.gridx = 0;
@@ -236,17 +230,11 @@ public class MainWindow extends JFrame implements ActionListener {
         profilePage.setVisible(true);
 
 
-    }
+    }*/
 
 
-    @Override
+/*    @Override
     public void actionPerformed(ActionEvent e) {
-        //hide hint when labels are clear
-        if (e.getSource() == profileNicknameField || e.getSource() == nameField || e.getSource() == idField || e.getSource() == emailField || e.getSource() == phoneField || e.getSource() == addressField) {
-            if (!allTextfieldFilled()) {
-                hintLabel.setVisible(false);
-            }
-        }
         //create profile
         if (e.getSource() == createProfileButton) {
 
@@ -282,13 +270,13 @@ public class MainWindow extends JFrame implements ActionListener {
             }
         }
 
-    }
+    }*/
 
-    boolean allTextfieldFilled() {
+/*    boolean allTextfieldFilled() {
         return !nameField.getText().isEmpty() && !idField.getText().isEmpty() && !emailField.getText().isEmpty() && !phoneField.getText().isEmpty() && !addressField.getText().isEmpty();
-    }
+    }*/
 
-    void addProfile(Profile profile, String nickname) {
+/*    void addProfile(Profile profile, String nickname) {
         if (nickname.isEmpty()) {
             int profileCount = profilesInstance.savedProfiles().size();
             nickname = "Profile " + profileCount;
@@ -371,6 +359,6 @@ public class MainWindow extends JFrame implements ActionListener {
     }
     void useProfile(String nickname) {
 
-    }
+    }*/
 
 }

@@ -1,4 +1,4 @@
-package me.rtx4090.GUI;
+package me.rtx4090.gui;
 
 import javax.swing.*;
 public class Notify {
