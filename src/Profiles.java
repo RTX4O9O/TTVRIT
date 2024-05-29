@@ -18,9 +18,11 @@ public class Profiles {
 
         if (jsonProfiles.exists()) {
             try {
-                Type type = new TypeToken<Map<String, Profile>>() {
-                }.getType();
+                Type type = new TypeToken<Map<String, Profile>>() {}.getType();
                 profiles = gson.fromJson(new FileReader(jsonProfiles), type);
+                if (profiles == null) {
+                    profiles = new HashMap<>();
+                }
 
                 // 現在，profiles 是一個 Map，其中包含了所有的個人資料
                 // 您可以使用 profiles.get("範例") 來獲取名為 "範例" 的個人資料

@@ -120,7 +120,8 @@ public class MainWindow extends JFrame implements ActionListener {
                 personalInfoInput.add(fieldsPanel, gbc);
             }
 
-            hintLabel = new JLabel("hello world, im the hint");
+            hintLabel = new JLabel();
+            hintLabel.setVisible(false);
             hintLabel.setHorizontalAlignment(JLabel.CENTER);
 
             createProfileButton = new JButton("新增");
@@ -169,40 +170,40 @@ public class MainWindow extends JFrame implements ActionListener {
             existedProfilesPanel.setLayout(new GridLayout(64, 1, 0, 2));
             // create panel for existed profiles
             {
-                if (profilesInstance.savedProfiles() != null) {
-                    for (String key : profilesInstance.savedProfiles().keySet()) {
-                        JPanel jPanel = new JPanel();
-                        jPanel.setName(key);
-                        jPanel.setLayout(new GridBagLayout());
-                        gbc.fill = GridBagConstraints.HORIZONTAL;
 
-                        //add label
-                        JLabel nameLabel = new JLabel(key);
-                        gbc.gridx = 0;
-                        gbc.gridy = 0;
-                        gbc.gridwidth = 4;
-                        gbc.weightx = 0.4;
-                        jPanel.add(nameLabel, gbc);
+                for (String key : profilesInstance.savedProfiles().keySet()) {
+                    JPanel jPanel = new JPanel();
+                    jPanel.setName(key);
+                    jPanel.setLayout(new GridBagLayout());
+                    gbc.fill = GridBagConstraints.HORIZONTAL;
 
-                        //add buttons
-                        JButton deleteButton = new JButton("刪除");
-                        deleteButton.setBackground(Color.RED);
-                        gbc.gridx = 4;
-                        gbc.gridwidth = 1;
-                        gbc.weightx = 0.1;
-                        jPanel.add(deleteButton, gbc);
+                    //add label
+                    JLabel nameLabel = new JLabel(key);
+                    gbc.gridx = 0;
+                    gbc.gridy = 0;
+                    gbc.gridwidth = 4;
+                    gbc.weightx = 0.4;
+                    jPanel.add(nameLabel, gbc);
 
-                        JButton useButton = new JButton("使用");
-                        useButton.setBackground(Color.GREEN);
-                        gbc.gridx = 5;
-                        gbc.gridwidth = 1;
-                        gbc.weightx = 0.1;
-                        jPanel.add(useButton, gbc);
+                    //add buttons
+                    JButton deleteButton = new JButton("刪除");
+                    deleteButton.setBackground(Color.RED);
+                    gbc.gridx = 4;
+                    gbc.gridwidth = 1;
+                    gbc.weightx = 0.1;
+                    jPanel.add(deleteButton, gbc);
 
-                        existedProfilesPanel.add(jPanel);
-                    }
+                    JButton useButton = new JButton("使用");
+                    useButton.setBackground(Color.GREEN);
+                    gbc.gridx = 5;
+                    gbc.gridwidth = 1;
+                    gbc.weightx = 0.1;
+                    jPanel.add(useButton, gbc);
 
+                    existedProfilesPanel.add(jPanel);
                 }
+
+
                 //add panels to scroll area
 
             }
@@ -233,6 +234,13 @@ public class MainWindow extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        //hide hint when labels are clear
+        if (e.getSource() == profileNicknameField || e.getSource() == nameField || e.getSource() == idField || e.getSource() == emailField || e.getSource() == phoneField || e.getSource() == addressField) {
+            if (!allTextfieldFilled()) {
+                hintLabel.setVisible(false);
+            }
+        }
+        //create profile
         if (e.getSource() == createProfileButton) {
 
             if (allTextfieldFilled()) {
@@ -240,6 +248,7 @@ public class MainWindow extends JFrame implements ActionListener {
                 Profile profile = new Profile(nameField.getText(), idField.getText(), emailField.getText(), phoneField.getText(), addressField.getText());
                 addProfile(profile, profileNicknameField.getText());
                 hintLabel.setText("新增成功");
+                hintLabel.setVisible(true);
                 nameField.setText("");
                 idField.setText("");
                 emailField.setText("");
@@ -249,17 +258,23 @@ public class MainWindow extends JFrame implements ActionListener {
             } else {
                 if (nameField.getText().equals("")) {
                     hintLabel.setText("請輸入姓名");
+                    hintLabel.setVisible(true);
                 } else if (idField.getText().equals("")) {
                     hintLabel.setText("請輸入身分證字號");
+                    hintLabel.setVisible(true);
                 } else if (emailField.getText().equals("")) {
                     hintLabel.setText("請輸入電子郵件");
+                    hintLabel.setVisible(true);
                 } else if (phoneField.getText().equals("")) {
                     hintLabel.setText("請輸入電話號碼");
+                    hintLabel.setVisible(true);
                 } else if (addressField.getText().equals("")) {
                     hintLabel.setText("請輸入聯絡地址");
+                    hintLabel.setVisible(true);
                 }
             }
         }
+
     }
 
     boolean allTextfieldFilled() {
