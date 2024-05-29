@@ -1,0 +1,23 @@
+{
+  "格式示例": {
+    "name": "法定全名 ",
+    "id": "身分證字號",
+    "address": "地址",
+    "number": "電話號碼",
+    "email": "電子郵件"
+  },
+  "範例": {
+    "name": "王小明",
+    "id": "A123456789",
+    "address": "台北市中正區重慶南路一段122號",
+    "number": "0900000000",
+    "email": "example@email.tw"
+  },
+  "profile": {
+    "name": "",
+    "id": "",
+    "address": "",
+    "number": "",
+    "email": ""
+  }
+}
