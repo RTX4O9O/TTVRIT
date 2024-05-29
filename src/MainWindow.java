@@ -189,6 +189,7 @@ public class MainWindow extends JFrame implements ActionListener {
                     //add buttons
                     JButton deleteButton = new JButton("刪除");
                     deleteButton.setBackground(Color.RED);
+                    deleteButton.addActionListener(e -> deleteProfile(key));
                     gbc.gridx = 4;
                     gbc.gridwidth = 1;
                     gbc.weightx = 0.1;
@@ -196,6 +197,7 @@ public class MainWindow extends JFrame implements ActionListener {
 
                     JButton useButton = new JButton("使用");
                     useButton.setBackground(Color.GREEN);
+                    useButton.addActionListener(e -> useProfile(key));
                     gbc.gridx = 5;
                     gbc.gridwidth = 1;
                     gbc.weightx = 0.1;
@@ -326,6 +328,7 @@ public class MainWindow extends JFrame implements ActionListener {
             // Add buttons
             JButton deleteButton = new JButton("刪除");
             deleteButton.setBackground(Color.RED);
+            deleteButton.addActionListener(e -> deleteProfile(key));
             gbc.gridx = 4;
             gbc.gridwidth = 1;
             gbc.weightx = 0.1;
@@ -333,6 +336,7 @@ public class MainWindow extends JFrame implements ActionListener {
 
             JButton useButton = new JButton("使用");
             useButton.setBackground(Color.GREEN);
+            useButton.addActionListener(e -> useProfile(key));
             gbc.gridx = 5;
             gbc.gridwidth = 1;
             gbc.weightx = 0.1;
@@ -344,6 +348,25 @@ public class MainWindow extends JFrame implements ActionListener {
         // Refresh the panel
         existedProfilesPanel.revalidate();
         existedProfilesPanel.repaint();
+    }
+    void deleteProfile(String nickname) {
+        //delete from profileInstance
+        Map<String, Profile> profiles = profilesInstance.savedProfiles();
+        profiles.remove(nickname);
+        //覆寫入json
+        Gson gson = new Gson();
+        String json = gson.toJson(profiles);
+        try {
+            Files.write(Paths.get(profilesInstance.jsonProfiles.getPath()), json.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+            Notify.error(e.getMessage());
+        }
+
+        updateExistedProfilesPanel();
+    }
+    void useProfile(String nickname) {
+
     }
 
 }
