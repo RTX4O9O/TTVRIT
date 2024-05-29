@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="35121224-237f-49d1-be8a-bf6e16e2779c" name="Changes" comment="change into maven project" />
 =======
+=======
+>>>>>>> origin/main
     <list default="true" id="e10610c5-4045-4223-aa31-f29f8e606629" name="Changes" comment="profile list instant update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainWindow.java" afterDir="false" />
     </list>
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +24,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -26,6 +35,9 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,11 +55,14 @@
   }
 }</component>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2h83xb0qsDqzvJqyOTytww5fqnC" />
 =======
+=======
+>>>>>>> origin/main
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -56,12 +71,16 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2fDYuMPKEIF14zDGVdha6tgcglP" />
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
 <<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
@@ -95,6 +114,8 @@
       <module name="TTVRIT maven" />
       <option name="filePath" />
 =======
+=======
+>>>>>>> origin/main
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
@@ -124,18 +145,27 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="TTVRIT" />
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
   </component>
   <component name="SharedIndexes">
@@ -149,6 +179,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
 <<<<<<< HEAD
       <changelist id="35121224-237f-49d1-be8a-bf6e16e2779c" name="Changes" comment="" />
       <created>1716962125902</created>
@@ -176,6 +207,8 @@
     </task>
     <option name="localTasksCounter" value="3" />
 =======
+=======
+>>>>>>> origin/main
       <changelist id="e10610c5-4045-4223-aa31-f29f8e606629" name="Changes" comment="" />
       <created>1713337340371</created>
       <option name="number" value="Default" />
@@ -390,12 +423,16 @@
       <updated>1716959838203</updated>
     </task>
     <option name="localTasksCounter" value="24" />
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+<<<<<<< HEAD
 <<<<<<< HEAD
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -412,6 +449,8 @@
     <MESSAGE value="change into maven project" />
     <option name="LAST_COMMIT_MESSAGE" value="change into maven project" />
 =======
+=======
+>>>>>>> origin/main
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ID_ORDER">
       <list>
@@ -446,6 +485,9 @@
     <MESSAGE value="can now add new profile" />
     <MESSAGE value="profile list instant update" />
     <option name="LAST_COMMIT_MESSAGE" value="profile list instant update" />
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
   </component>
 </project>

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -13,10 +14,15 @@ target/
 *.iml
 *.ipr
 =======
+=======
+>>>>>>> origin/main
 ### IntelliJ IDEA ###
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
 
 ### Eclipse ###
@@ -28,6 +34,12 @@ out/
 .springBeans
 .sts4-cache
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+>>>>>>> origin/main
 =======
 bin/
 !**/src/main/**/bin/
@@ -41,9 +53,12 @@ bin/
 /nbdist/
 /.nb-gradle/
 <<<<<<< HEAD
+<<<<<<< HEAD
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
+=======
+>>>>>>> origin/main
 =======
 >>>>>>> origin/main
 
