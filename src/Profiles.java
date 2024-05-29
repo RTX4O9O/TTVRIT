@@ -10,11 +10,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Profiles {
+    public File jsonProfiles = new File(System.getProperty("user.home") + "/TTVRIT/profiles.json");;
 
     public Map<String, Profile> savedProfiles() {
         Map<String, Profile> profiles;
         Gson gson = new Gson();
-        File jsonProfiles = new File(System.getProperty("user.home") + "/TTVRIT/profiles.json");
 
         if (jsonProfiles.exists()) {
             try {

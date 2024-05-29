@@ -1,7 +1,13 @@
+import com.google.gson.Gson;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Map;
 
 public class MainWindow extends JFrame implements ActionListener {
     JPanel reportPage = new JPanel();
@@ -228,7 +234,11 @@ public class MainWindow extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == createProfileButton) {
+
             if (allTextfieldFilled()) {
+
+                Profile profile = new Profile(nameField.getText(), idField.getText(), emailField.getText(), phoneField.getText(), addressField.getText());
+                addProfile(profile, profileNicknameField.getText());
                 hintLabel.setText("新增成功");
                 nameField.setText("");
                 idField.setText("");
@@ -256,4 +266,24 @@ public class MainWindow extends JFrame implements ActionListener {
         return !nameField.getText().equals("") && !idField.getText().equals("") && !emailField.getText().equals("") && !phoneField.getText().equals("") && !addressField.getText().equals("");
     }
 
+    void addProfile(Profile profile, String nickname) {
+        if (nickname.equals("")) {
+            int profileCount = profilesInstance.savedProfiles().size();
+            nickname = "Profile " + profileCount;
+        }
+
+        //加入到profileInstance
+        Map<String, Profile> profiles = profilesInstance.savedProfiles();
+        profiles.put(nickname, profile);
+        //覆寫入json
+        Gson gson = new Gson();
+        String json = gson.toJson(profiles);
+        try {
+            Files.write(Paths.get(profilesInstance.jsonProfiles.getPath()), json.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+            Notify.error(e.getMessage());
+        }
+
+    }
 }
