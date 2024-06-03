@@ -16,4 +16,6 @@ public class Notify {
     public static void warning(String message) {
         JOptionPane.showMessageDialog(null, message, "Warning", JOptionPane.WARNING_MESSAGE);
     }
+
+    
 }

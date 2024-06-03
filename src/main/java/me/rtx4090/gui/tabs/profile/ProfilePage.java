@@ -199,22 +199,12 @@ public class ProfilePage implements ActionListener{
         existedProfiles.add(scrollPane);
         existedProfiles.setBorder(BorderFactory.createLineBorder(Color.white, 5));
 
-        /*gbc.gridy = 0;
-        gbc.gridheight = 1;
-        gbc.gridwidth = 1;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.weightx = 0.5; // Set weightx to 0.5
-        gbc.weighty = 1; // Set weighty to 1*/
-
-
-        //gbc.gridx = 0;
         profilePanel.add(createProfiles);
-        //gbc.gridx = 1;
+
         profilePanel.add(scrollPane, gbc);
 
         profilePanel.setBackground(Color.black);
         profilePanel.setVisible(true);
-
 
     }
 
