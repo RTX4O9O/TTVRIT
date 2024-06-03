@@ -1,4 +1,4 @@
-package ReportPage;
+package me.rtx4090.reportWebsite;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
