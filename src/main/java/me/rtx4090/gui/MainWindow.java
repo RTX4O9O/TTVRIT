@@ -1,5 +1,6 @@
 package me.rtx4090.gui;
 
+import me.rtx4090.gui.tabs.history.HistoryPage;
 import me.rtx4090.gui.tabs.profile.ProfilePage;
 import me.rtx4090.gui.tabs.report.ReportPage;
 
@@ -11,6 +12,8 @@ public class MainWindow extends JFrame {
     JPanel profilePanel = profilePage.profilePanel;
     ReportPage reportPage = new ReportPage();
     JPanel reportPanel = reportPage.reportPanel;
+    HistoryPage historyPage = new HistoryPage();
+    JPanel historyPanel = historyPage.historyPanel;
 
     public MainWindow() {
         this.setTitle("Taiwan Traffic Violation Reporting Integration Tool (TTVRIT) <alpha>");
@@ -19,10 +22,11 @@ public class MainWindow extends JFrame {
         this.setSize(800, 600);
 
         JTabbedPane tabbedPane = new JTabbedPane();
-        tabbedPane.add(profilePanel, "Profile");
         tabbedPane.add(reportPanel, "Report");
+        tabbedPane.add(profilePanel, "Profile");
+        tabbedPane.add(historyPanel, "Report History");
 
-        this.add(profilePanel, BorderLayout.CENTER);
+        this.add(tabbedPane, BorderLayout.CENTER);
 
 
 
