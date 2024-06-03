@@ -16,6 +16,8 @@ public class Notify {
     public static void warning(String message) {
         JOptionPane.showMessageDialog(null, message, "Warning", JOptionPane.WARNING_MESSAGE);
     }
-
+    public static void normal(String message) {
+        JOptionPane.showMessageDialog(null, message, "TTVRIT", JOptionPane.INFORMATION_MESSAGE);
+    }
     
 }

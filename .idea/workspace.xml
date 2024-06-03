@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="idk wtf did i fix but i did fix something">
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/profile/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/profile/ProfilePage.java" afterDir="false" />
-    </list>
+    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="init ReportPage.java" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,12 +19,12 @@
     &quot;assignee&quot;: &quot;RTX4O9O&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/RTX4O9O/TTVRIT.git&quot;,
-    &quot;accountId&quot;: &quot;564180a7-2d36-431a-84bb-ad7d8c21e0ef&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/RTX4O9O/TTVRIT.git",
+    "accountId": "409f69e3-2735-41db-ba86-223053a871b1"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -78,6 +75,7 @@
       <workItem from="1716995067619" duration="3368000" />
       <workItem from="1717392600399" duration="22000" />
       <workItem from="1717392629426" duration="876000" />
+      <workItem from="1717396138579" duration="504000" />
     </task>
     <task id="LOCAL-00001" summary="idk wtf did i fix but i did fix something">
       <option name="closed" value="true" />
@@ -87,7 +85,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716995517165</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init ReportPage.java">
+      <option name="closed" value="true" />
+      <created>1717396623718</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717396623718</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,6 +101,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="idk wtf did i fix but i did fix something" />
-    <option name="LAST_COMMIT_MESSAGE" value="idk wtf did i fix but i did fix something" />
+    <MESSAGE value="init ReportPage.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="init ReportPage.java" />
   </component>
 </project>
