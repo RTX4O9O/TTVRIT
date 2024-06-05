@@ -7,7 +7,7 @@ import me.rtx4090.gui.Notify;
 import javax.swing.*;
 import java.io.File;
 import java.io.FileReader;
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 
 public class HistoryPage {
