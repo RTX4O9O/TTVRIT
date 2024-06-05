@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="edit HistoryPage.java">
+    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="add SubmitButton.java">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/RegionSelector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/history/HistoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/history/HistoryPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +29,15 @@
     &quot;assignee&quot;: &quot;RTX4O9O&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/RTX4O9O/TTVRIT.git",
-    "accountId": "564180a7-2d36-431a-84bb-ad7d8c21e0ef"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/RTX4O9O/TTVRIT.git&quot;,
+    &quot;accountId&quot;: &quot;564180a7-2d36-431a-84bb-ad7d8c21e0ef&quot;
   }
-}]]></component>
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -68,6 +70,15 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="me.rtx4090.Main" />
+      <module name="TTVRIT" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="TTVRIT maven" />
       <method v="2">
@@ -95,7 +106,8 @@
       <workItem from="1717392600399" duration="22000" />
       <workItem from="1717392629426" duration="876000" />
       <workItem from="1717396138579" duration="1256000" />
-      <workItem from="1717592723909" duration="1503000" />
+      <workItem from="1717592723909" duration="2847000" />
+      <workItem from="1717596282465" duration="300000" />
     </task>
     <task id="LOCAL-00001" summary="idk wtf did i fix but i did fix something">
       <option name="closed" value="true" />
@@ -169,7 +181,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717576426649</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="history page finished">
+      <option name="closed" value="true" />
+      <created>1717594853735</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717594853735</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add SubmitButton.java">
+      <option name="closed" value="true" />
+      <created>1717594999358</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717594999358</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +225,8 @@
     <MESSAGE value="change HistoryPage.java" />
     <MESSAGE value="change HistoryPage.java, add ReportProperties.java&#10;enable HistoryPage.java to read properties.json and make ReportProperties.java ArrayList" />
     <MESSAGE value="edit HistoryPage.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit HistoryPage.java" />
+    <MESSAGE value="history page finished" />
+    <MESSAGE value="add SubmitButton.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="add SubmitButton.java" />
   </component>
 </project>
