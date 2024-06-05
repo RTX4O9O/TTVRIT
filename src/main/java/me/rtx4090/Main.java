@@ -7,5 +7,6 @@ public class Main {
         MainWindow appwindow = new MainWindow();
         //Notify.error();
 
+        ;
     }
 }

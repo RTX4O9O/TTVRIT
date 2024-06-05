@@ -1,16 +1,12 @@
 {
   "region": "新竹縣",
-  "time": {
-    "year": 2024,
-    "month": 1,
-    "day": 1,
-    "hour": 0,
-    "minute": 0
-  },
+  "year": 2024,
+  "month": 1,
+  "day": 1,
+  "hour": 0,
+  "minute": 0,
   "license plate number": "ABC-1234",
-  "location": {
-    "district/city": "竹北市",
-    "road": "文興路",
-    "no": "二段176號"
-  }
+  "city": "竹北市",
+  "road": "文興路",
+  "no": "二段176號"
 }

@@ -4,19 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="add normal notify">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/properties.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="change HistoryPage.java">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/ReportProperties.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/city_code.json" beforeDir="false" afterPath="$PROJECT_DIR$/city_code.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/profiles.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/history/HistoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/history/HistoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/properties.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/properties.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -117,7 +122,39 @@
       <option name="project" value="LOCAL" />
       <updated>1717396769841</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="remove unnecessary line">
+      <option name="closed" value="true" />
+      <created>1717567334950</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717567334950</updated>
+    </task>
+    <task id="LOCAL-00005" summary="move example json file to resource folder">
+      <option name="closed" value="true" />
+      <created>1717567361890</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717567361890</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add report properties example json">
+      <option name="closed" value="true" />
+      <created>1717567386502</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717567386502</updated>
+    </task>
+    <task id="LOCAL-00007" summary="change HistoryPage.java">
+      <option name="closed" value="true" />
+      <created>1717567413282</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717567413282</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +175,10 @@
     <MESSAGE value="idk wtf did i fix but i did fix something" />
     <MESSAGE value="init ReportPage.java" />
     <MESSAGE value="add normal notify" />
-    <option name="LAST_COMMIT_MESSAGE" value="add normal notify" />
+    <MESSAGE value="remove unnecessary line" />
+    <MESSAGE value="move example json file to resource folder" />
+    <MESSAGE value="add report properties example json" />
+    <MESSAGE value="change HistoryPage.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="change HistoryPage.java" />
   </component>
 </project>
