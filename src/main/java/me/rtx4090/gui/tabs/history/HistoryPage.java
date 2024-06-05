@@ -7,15 +7,15 @@ import me.rtx4090.gui.Notify;
 import javax.swing.*;
 import java.io.File;
 import java.io.FileReader;
-
 import java.util.ArrayList;
 
 public class HistoryPage {
-    public JPanel historyPanel = new JPanel();
+    public JPanel contentPanel = new JPanel();
+
+    public JScrollPane historyPanel;
     File historyFolder = new File(System.getProperty("user.home") + "/TTVRIT/Reports");
 
     public HistoryPage() {
-        historyPanel.setLayout(null);
         // if history folder exists
         if (!historyFolder.exists()) {
             historyFolder.mkdirs();
@@ -23,7 +23,7 @@ public class HistoryPage {
 
         File[] filesInsideHistoryFolder = historyFolder.listFiles();
         ArrayList<ReportProperties> histories = new ArrayList<>();
-        Gson gson = new Gson();
+
         for (File file : filesInsideHistoryFolder) {
             if (file.isDirectory()) {
                 File propertiesFile = new File(file.getAbsolutePath() + "/properties.json");
@@ -42,10 +42,11 @@ public class HistoryPage {
         // display histories
         for (int i = 0; i < histories.size(); i++) {
             ReportProperties reportProperties = histories.get(i);
-            JLabel label = new JLabel(reportProperties.city + " " + reportProperties.road + " " + reportProperties.no);
+            JLabel label = new JLabel("檢舉區域：" + reportProperties.region + "；檢舉時間：" + reportProperties.year + "/" + reportProperties.month + "/" + reportProperties.day + "；車牌號碼：" + reportProperties.licensePlateNumber);
             label.setBounds(10, 10 + i * 20, 300, 20);
-            historyPanel.add(label);
+            contentPanel.add(label);
         }
+        historyPanel = new JScrollPane(contentPanel);
     }
 
 

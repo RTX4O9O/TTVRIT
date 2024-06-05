@@ -13,7 +13,7 @@ public class MainWindow extends JFrame {
     ReportPage reportPage = new ReportPage();
     JPanel reportPanel = reportPage.reportPanel;
     HistoryPage historyPage = new HistoryPage();
-    JPanel historyPanel = historyPage.historyPanel;
+    JScrollPane historyPanel = historyPage.historyPanel;
 
     public MainWindow() {
         this.setTitle("Taiwan Traffic Violation Reporting Integration Tool (TTVRIT) <alpha>");
