@@ -1,4 +1,10 @@
 package me.rtx4090.reportWebsite;
 
-public class KMN extends Catalog{
+import org.openqa.selenium.WebDriver;
+
+public class KMN extends Catalog {
+    @Override
+    public void getElement(WebDriver driver) {
+
+    }
 }

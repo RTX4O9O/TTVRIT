@@ -1,4 +1,10 @@
 package me.rtx4090.reportWebsite;
 
-public class HSC extends Catalog{
+import org.openqa.selenium.WebDriver;
+
+public class HSC extends Catalog {
+    @Override
+    public void getElement(WebDriver driver) {
+
+    }
 }

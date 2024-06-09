@@ -1,4 +1,10 @@
 package me.rtx4090.reportWebsite;
 
-public class LNN extends Catalog{
+import org.openqa.selenium.WebDriver;
+
+public class LNN extends Catalog {
+    @Override
+    public void getElement(WebDriver driver) {
+
+    }
 }

@@ -1,4 +1,10 @@
 package me.rtx4090.reportWebsite;
 
-public class NTO extends Catalog{
+import org.openqa.selenium.WebDriver;
+
+public class NTO extends Catalog {
+    @Override
+    public void getElement(WebDriver driver) {
+
+    }
 }
