@@ -5,7 +5,7 @@ import javax.swing.*;
 public class ContentScrollPane {
     private JPanel panel = new JPanel();
     public JScrollPane scrollPane = new JScrollPane(panel);
-    public ContentScrollPane() {
+    ContentScrollPane(String regionCode) {
         //panel.add();
     }
 }

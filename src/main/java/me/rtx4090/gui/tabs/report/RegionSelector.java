@@ -18,18 +18,12 @@ public class RegionSelector {
             regionSelector.addItem(key);
         }
 
-        regionSelector.addActionListener(e -> {
-            regionCode = regions.get(regionSelector.getSelectedItem().toString());
-            refreshScrollPane();
-        });
     }
 
     public String getRegionCode() {
         return regionCode;
     }
-    void refreshScrollPane() {
 
-    }
     void initRegions() {
         regions.put("基隆市", "LUU");
         regions.put("新北市", "TPH");

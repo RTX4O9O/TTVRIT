@@ -4,7 +4,9 @@ import javax.swing.*;
 
 public class SubmitButton {
     public JButton button = new JButton("Submit");
+
     SubmitButton() {
 
     }
+
 }
