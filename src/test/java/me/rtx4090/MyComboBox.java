@@ -5,6 +5,10 @@ public class MyComboBox extends JComboBox {
     MyComboBox() {
         super();
         this.setAutoscrolls(true);
+        //AutoCompleteDecorator.decorate(this);
+
+
+
         addItem("基隆市");
         addItem("新北市");
         addItem("台北市");
