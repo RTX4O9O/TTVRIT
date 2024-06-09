@@ -1,4 +1,4 @@
 package me.rtx4090.reportWebsite;
 
-public class ILN {
+public class ILN extends Catalog{
 }

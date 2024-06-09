@@ -1,4 +1,4 @@
 package me.rtx4090.reportWebsite;
 
-public class MAL {
+public class MAL extends Catalog{
 }

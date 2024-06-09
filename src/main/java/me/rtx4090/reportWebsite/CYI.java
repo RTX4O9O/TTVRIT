@@ -1,4 +1,4 @@
 package me.rtx4090.reportWebsite;
 
-public class CYI {
+public class CYI extends Catalog{
 }

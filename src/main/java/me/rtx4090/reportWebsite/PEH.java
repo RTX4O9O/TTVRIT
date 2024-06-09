@@ -1,4 +1,4 @@
 package me.rtx4090.reportWebsite;
 
-public class PEH {
+public class PEH extends Catalog{
 }

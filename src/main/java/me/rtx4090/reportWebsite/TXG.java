@@ -1,4 +1,4 @@
 package me.rtx4090.reportWebsite;
 
-public class TXG {
+public class TXG extends Catalog{
 }

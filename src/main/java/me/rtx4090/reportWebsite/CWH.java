@@ -1,4 +1,4 @@
 package me.rtx4090.reportWebsite;
 
-public class CWH {
+public class CWH extends Catalog{
 }

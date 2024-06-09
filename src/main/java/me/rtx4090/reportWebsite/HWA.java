@@ -1,4 +1,4 @@
 package me.rtx4090.reportWebsite;
 
-public class HWA {
+public class HWA extends Catalog{
 }
