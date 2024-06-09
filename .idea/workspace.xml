@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="add Test area back">
+    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="define all elements in HSH report site">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ReportPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ReportPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/ReportPageHSH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/ReportPageHSH.java" afterDir="false" />
     </list>
@@ -125,7 +126,8 @@
       <workItem from="1717596282465" duration="6494000" />
       <workItem from="1717901743931" duration="1458000" />
       <workItem from="1717927479348" duration="2082000" />
-      <workItem from="1717932860388" duration="1170000" />
+      <workItem from="1717932860388" duration="2215000" />
+      <workItem from="1717937961598" duration="3143000" />
     </task>
     <task id="LOCAL-00001" summary="idk wtf did i fix but i did fix something">
       <option name="closed" value="true" />
@@ -231,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717598470129</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix NullPointerException in ReportPage.java">
+      <option name="closed" value="true" />
+      <created>1717934457339</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1717934457339</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +273,8 @@
     <MESSAGE value="add SubmitButton.java" />
     <MESSAGE value="add RegionSelector.java" />
     <MESSAGE value="add Test area back" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Test area back" />
+    <MESSAGE value="fix NullPointerException in ReportPage.java" />
+    <MESSAGE value="define all elements in HSH report site" />
+    <option name="LAST_COMMIT_MESSAGE" value="define all elements in HSH report site" />
   </component>
 </project>
