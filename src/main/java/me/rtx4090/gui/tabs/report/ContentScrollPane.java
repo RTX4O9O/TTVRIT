@@ -6,6 +6,9 @@ public class ContentScrollPane {
     private JPanel panel = new JPanel();
     public JScrollPane scrollPane = new JScrollPane(panel);
     ContentScrollPane(String regionCode) {
-        //panel.add();
+        switch (regionCode) {
+            case "LUU":
+
+        }
     }
 }

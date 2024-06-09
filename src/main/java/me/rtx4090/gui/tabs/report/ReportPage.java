@@ -9,6 +9,7 @@ public class ReportPage {
     RegionSelector regionSelectorInstance = new RegionSelector();
     ContentScrollPane contentScrollPaneInstance;
     SubmitButton submitButton = new SubmitButton();
+    JLabel profileInUse = new JLabel();
 
     public ReportPage() {
         Driver driver = new Driver();

@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class ReportPageHSH {
+public class HSH {
 
-    public ReportPageHSH(WebDriver driver) {
+    public HSH(WebDriver driver) {
         String url = "https://traffic.hchpb.gov.tw/index.php?catid=11";
         driver.get(url);
 

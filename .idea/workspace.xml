@@ -5,10 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="define all elements in HSH report site">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/CHY.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/CWH.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/CYI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/HSC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/HWA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/ILN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/IUH.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/KHH.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/KLU.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/KMN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/LNN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/MAL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/NTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/PEH.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TNN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TTT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TXG.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/YLH.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ReportPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ReportPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/ReportPageHSH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/ReportPageHSH.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/ReportPageHSH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/HSH.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/ReportPageTPH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TPH.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +146,7 @@
       <workItem from="1717901743931" duration="1458000" />
       <workItem from="1717927479348" duration="2082000" />
       <workItem from="1717932860388" duration="2215000" />
-      <workItem from="1717937961598" duration="3143000" />
+      <workItem from="1717937961598" duration="5658000" />
     </task>
     <task id="LOCAL-00001" summary="idk wtf did i fix but i did fix something">
       <option name="closed" value="true" />
@@ -241,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717934457339</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="define all elements in HSH report site">
+      <option name="closed" value="true" />
+      <created>1717941799815</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1717941799815</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
