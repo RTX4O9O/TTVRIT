@@ -17,6 +17,8 @@ public class ReportPageHSH {
         WebElement reporterPhone = driver.findElement(By.id("tel"));
         WebElement reporterAddress = driver.findElement(By.id("address2"));
 
+
+
         Select caseDate = new Select(driver.findElement(By.id("select2-report_date-container")));
         Select caseHour = new Select(driver.findElement(By.id("select2-report_month")));
 

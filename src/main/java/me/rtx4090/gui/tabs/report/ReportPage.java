@@ -6,9 +6,9 @@ import java.awt.*;
 public class ReportPage {
 
     public JPanel reportPanel = new JPanel();
-    private RegionSelector regionSelectorInstance = new RegionSelector();
-    private ContentScrollPane contentScrollPaneInstance;
-    private SubmitButton submitButton = new SubmitButton();
+    RegionSelector regionSelectorInstance = new RegionSelector();
+    ContentScrollPane contentScrollPaneInstance;
+    SubmitButton submitButton = new SubmitButton();
 
     public ReportPage() {
         Driver driver = new Driver();
@@ -16,8 +16,8 @@ public class ReportPage {
         setRegionSelectorAction();
         setSubmitButtonAction();
         reportPanel.add(regionSelectorInstance.regionSelector);
-        reportPanel.add(contentScrollPaneInstance.scrollPane);
-        reportPanel.add(submitButton.button);
+        //reportPanel.add(contentScrollPaneInstance.scrollPane);
+        //reportPanel.add(submitButton.button);
     }
 
     private void setRegionSelectorAction() {
@@ -34,7 +34,9 @@ public class ReportPage {
     }
 
     void refreshScrollPane(String regionCode) {
-
+        contentScrollPaneInstance = new ContentScrollPane(regionCode);
+        reportPanel.add(contentScrollPaneInstance.scrollPane);
+        reportPanel.add(submitButton.button);
     }
 
 }
