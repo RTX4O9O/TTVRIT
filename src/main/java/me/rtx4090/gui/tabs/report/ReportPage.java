@@ -9,6 +9,7 @@ public class ReportPage {
     RegionSelector regionSelectorInstance = new RegionSelector();
     static ContentScrollPane contentScrollPaneInstance = new ContentScrollPane("DEFAULT");
     SubmitButton submitButton = new SubmitButton();
+    public static String regionCode = "DEFAULT";
 
     public ReportPage() {
         Driver driver = new Driver();
@@ -21,7 +22,8 @@ public class ReportPage {
     private void setRegionSelectorAction() {
         regionSelectorInstance.regionSelector.addActionListener(e -> {
             regionSelectorInstance.regionCode = regionSelectorInstance.regions.get(regionSelectorInstance.regionSelector.getSelectedItem().toString());
-            refreshScrollPane(regionSelectorInstance.regionCode);
+            regionCode = regionSelectorInstance.regionCode;
+            refreshScrollPane(regionCode);
         });
     }
 
