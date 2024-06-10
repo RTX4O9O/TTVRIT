@@ -8,7 +8,6 @@ public class ReportPage {
     public static JPanel reportPanel = new JPanel();
     RegionSelector regionSelectorInstance = new RegionSelector();
     static ContentScrollPane contentScrollPaneInstance = new ContentScrollPane("DEFAULT");
-    SubmitButton submitButton = new SubmitButton();
     public static String regionCode = "DEFAULT";
 
     public ReportPage() {
@@ -58,6 +57,10 @@ public class ReportPage {
 
         reportPanel.revalidate();
         reportPanel.repaint();
+    }
+
+    static boolean allFilled() {
+        return contentScrollPaneInstance.allFilled();
     }
 
 }

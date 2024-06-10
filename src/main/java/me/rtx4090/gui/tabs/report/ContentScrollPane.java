@@ -1,6 +1,7 @@
 package me.rtx4090.gui.tabs.report;
 
 import me.rtx4090.ProfileInUse;
+import me.rtx4090.gui.Notify;
 import me.rtx4090.reportWebsite.*;
 import org.openqa.selenium.WebDriver;
 
@@ -14,9 +15,23 @@ public class ContentScrollPane {
 
     Driver driver = new Driver();
     WebDriver eDriver = driver.edgeDriver;
+    private JTextField yearField;
+    private JTextField minuteField;
+    private JTextField hourField;
+    private JTextField monthField;
+    private JTextField dayField;
+    private JTextField licenseNumField1;
+    private JTextField licenseNumField2;
+    private JTextField cityField;
+    private JTextField roadField;
+    private JTextField locationField;
+    public Catalog catalog;
+    public JButton submitButton;
 
     ContentScrollPane(String regionCode) {
-        Catalog catalog;
+
+        submitButton = new JButton("Submit");
+        submitButton.addActionListener(e -> submit());
         switch (regionCode) {
             case "KLU":
                 catalog = new KLU();
@@ -92,7 +107,6 @@ public class ContentScrollPane {
 
         }
         setupGUI();
-        catalog.getElement();
 
 
     }
@@ -106,7 +120,7 @@ public class ContentScrollPane {
         panel.add(LicenseNum());
         panel.add(Location());
 
-        panel.add(SubmitButton.button);
+        panel.add(submitButton);
     }
 
     JPanel CaseTime() {
@@ -114,19 +128,19 @@ public class ContentScrollPane {
         panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
 
         JLabel yearLabel1 = new JLabel("西元");
-        JTextField yearField = new JTextField(4);
+        yearField = new JTextField(4);
         JLabel yearLabel2 = new JLabel("年");
 
-        JTextField monthField = new JTextField(2);
+        monthField = new JTextField(2);
         JLabel monthLabel = new JLabel("月");
 
-        JTextField dayField = new JTextField(2);
+        dayField = new JTextField(2);
         JLabel dayLabel = new JLabel("日");
 
-        JTextField hourField = new JTextField(2);
+        hourField = new JTextField(2);
         JLabel hourLabel = new JLabel("時");
 
-        JTextField minuteField = new JTextField(2);
+        minuteField = new JTextField(2);
         JLabel minuteLabel = new JLabel("分");
 
         LocalDateTime now = LocalDateTime.now();
@@ -157,9 +171,9 @@ public class ContentScrollPane {
         panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
 
         JLabel licenseNumLabel = new JLabel("車牌號碼：");
-        JTextField licenseNumField1 = new JTextField(3);
+        licenseNumField1 = new JTextField(3);
         JLabel licenseNumFieldDash = new JLabel("-");
-        JTextField licenseNumField2 = new JTextField(4);
+        licenseNumField2 = new JTextField(4);
 
         panel.add(licenseNumLabel);
         panel.add(licenseNumField1);
@@ -179,9 +193,9 @@ public class ContentScrollPane {
         lower.setLayout(new BoxLayout(lower, BoxLayout.X_AXIS));
 
         JLabel cityLabel = new JLabel("鄉鎮市區：");
-        JTextField cityField = new JTextField(3);
+        cityField = new JTextField(3);
         JLabel road = new JLabel("街道：");
-        JTextField roadField = new JTextField(4);
+        roadField = new JTextField(4);
 
         upper.add(cityLabel);
         upper.add(cityField);
@@ -189,12 +203,31 @@ public class ContentScrollPane {
         upper.add(roadField);
 
         JLabel locationLabel = new JLabel("路段 / 號 / 說明：");
-        JTextField locationField = new JTextField(10);
+        locationField = new JTextField(10);
         lower.add(locationLabel);
         lower.add(locationField);
 
         panel.add(upper);
         panel.add(lower);
         return panel;
+    }
+
+    boolean allFilled() {
+        if (ProfileInUse.profileNickname != null && yearField.getText() != null && monthField.getText() != null && dayField.getText() != null && hourField.getText() != null && minuteField.getText() != null && licenseNumField1.getText() != null && licenseNumField2.getText() != null && cityField.getText() != null && roadField.getText() != null && locationField.getText() != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    void submit() {
+        if (ReportPage.allFilled()) {
+            catalog.getElement();
+
+
+        } else {
+            Notify.error("請先將所有欄位填寫完畢。");
+        }
+
     }
 }
