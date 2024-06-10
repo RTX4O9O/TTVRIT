@@ -5,9 +5,9 @@ import java.awt.*;
 
 public class ReportPage {
 
-    public JPanel reportPanel = new JPanel();
+    public static JPanel reportPanel = new JPanel();
     RegionSelector regionSelectorInstance = new RegionSelector();
-    ContentScrollPane contentScrollPaneInstance = new ContentScrollPane("DEFAULT");
+    static ContentScrollPane contentScrollPaneInstance = new ContentScrollPane("DEFAULT");
     SubmitButton submitButton = new SubmitButton();
 
     public ReportPage() {
@@ -31,7 +31,7 @@ public class ReportPage {
         });
     }
 
-    void refreshScrollPane(String regionCode) {
+    public static void refreshScrollPane(String regionCode) {
         boolean containsPane = false;
         for (Component component : reportPanel.getComponents()) {
             if (component == contentScrollPaneInstance.scrollPane) {
