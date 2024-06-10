@@ -7,7 +7,7 @@ public class ReportPage {
 
     public JPanel reportPanel = new JPanel();
     RegionSelector regionSelectorInstance = new RegionSelector();
-    ContentScrollPane contentScrollPaneInstance;
+    ContentScrollPane contentScrollPaneInstance = new ContentScrollPane("TPE");
     SubmitButton submitButton = new SubmitButton();
     JLabel profileInUse = new JLabel();
 
@@ -17,8 +17,6 @@ public class ReportPage {
         setRegionSelectorAction();
         setSubmitButtonAction();
         reportPanel.add(regionSelectorInstance.regionSelector);
-        //reportPanel.add(contentScrollPaneInstance.scrollPane);
-        //reportPanel.add(submitButton.button);
     }
 
     private void setRegionSelectorAction() {
@@ -35,9 +33,18 @@ public class ReportPage {
     }
 
     void refreshScrollPane(String regionCode) {
+        boolean containsPane = false;
+        for (Component component : reportPanel.getComponents()) {
+            if (component == contentScrollPaneInstance.scrollPane) {
+                containsPane = true;
+            }
+        }
+        if(containsPane){
+            reportPanel.remove(contentScrollPaneInstance.scrollPane);
+        }
         contentScrollPaneInstance = new ContentScrollPane(regionCode);
         reportPanel.add(contentScrollPaneInstance.scrollPane);
-        reportPanel.add(submitButton.button);
+
     }
 
 }
