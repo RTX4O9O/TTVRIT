@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="update ProfileInUse logic destination">
+    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="test JTextField">
+      <change afterPath="$PROJECT_DIR$/src/test/java/me/rtx4090/CaseTime.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/rtx4090/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/rtx4090/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +79,7 @@
       <recent name="me.rtx4090" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -132,7 +134,7 @@
       <workItem from="1717932860388" duration="2215000" />
       <workItem from="1717937961598" duration="8083000" />
       <workItem from="1717994699067" duration="8167000" />
-      <workItem from="1718004147283" duration="3228000" />
+      <workItem from="1718004147283" duration="4957000" />
     </task>
     <task id="LOCAL-00001" summary="idk wtf did i fix but i did fix something">
       <option name="closed" value="true" />
@@ -382,7 +384,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718007276878</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="test JTextField">
+      <option name="closed" value="true" />
+      <created>1718007647460</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1718007647460</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +410,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change HistoryPage.java" />
     <MESSAGE value="change HistoryPage.java, add ReportProperties.java&#10;enable HistoryPage.java to read properties.json and make ReportProperties.java ArrayList" />
     <MESSAGE value="edit HistoryPage.java" />
     <MESSAGE value="history page finished" />
@@ -425,6 +434,7 @@
     <MESSAGE value="move profileInUse from Main to ProfileInUse.java" />
     <MESSAGE value="move profileInUse hint label to ContentScrollPane.java" />
     <MESSAGE value="update ProfileInUse logic destination" />
-    <option name="LAST_COMMIT_MESSAGE" value="update ProfileInUse logic destination" />
+    <MESSAGE value="test JTextField" />
+    <option name="LAST_COMMIT_MESSAGE" value="test JTextField" />
   </component>
 </project>
