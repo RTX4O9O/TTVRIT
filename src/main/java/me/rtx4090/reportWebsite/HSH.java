@@ -1,15 +1,25 @@
 package me.rtx4090.reportWebsite;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class HSH extends Catalog {
 
-    @Override
-    public void getElement(WebDriver driver) {
+    public HSH(WebDriver driver) {
+        this.driver = driver;
+        verifySteps();
 
+    }
+
+    @Override
+    public void getElement() {
 
         reporterName = driver.findElement(By.id("name"));
         reporterID = driver.findElement(By.id("idcard"));
@@ -17,17 +27,17 @@ public class HSH extends Catalog {
         reporterPhone = driver.findElement(By.id("tel"));
         reporterAddress = driver.findElement(By.id("address2"));
 
-        caseDate = new Select(driver.findElement(By.id("select2-report_date-container")));
-        caseHour = new Select(driver.findElement(By.id("select2-hour-container")));
-        caseMinute = new Select(driver.findElement(By.id("select2-minute-container")));
+        caseDate = driver.findElement(By.id("select2-report_date-container"));
+        caseHour = driver.findElement(By.id("select2-hour-container"));
+        caseMinute = driver.findElement(By.id("select2-minute-container"));
 
         licensePlateNum = driver.findElement(By.id("carcode"));
 
-        city = new Select(driver.findElement(By.id("select2-cakeslt1-container")));
-        road = new Select(driver.findElement(By.id("select2-cakeslt2-container")));
+        city = driver.findElement(By.id("select2-cakeslt1-container"));
+        road = driver.findElement(By.id("select2-cakeslt2-container"));
         no = driver.findElement(By.id("address"));
 
-        reason = new Select(driver.findElement(By.cssSelector("select[name=legislation2]")));
+        reason = driver.findElement(By.cssSelector("select[name=legislation2]"));
 
         fileInput1 = driver.findElement(By.xpath("(//input[@id='data[]'])[1]"));
         fileInput2 = driver.findElement(By.xpath("(//input[@id='data[]'])[2]"));
@@ -41,6 +51,47 @@ public class HSH extends Catalog {
 
     @Override
     public void verifySteps() {
+        String urlBefore = "https://traffic.hchpb.gov.tw/10/13";
+        String urlAfter = "https://traffic.hchpb.gov.tw/report";
+
+        driver.get(urlBefore);
+
+        //wait for the page to load
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.jsReturnsValue("return document.readyState=='complete';"));
+
+        // Define Checkbox
+        WebElement checkbox = driver.findElement(By.cssSelector("label.agree > input[type='checkbox']"));
+        // Scroll to view
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", checkbox);
+        // Wait for the checkbox to be clickable
+        wait.until(ExpectedConditions.elementToBeClickable(checkbox));
+
+        // Click the checkbox
+        try {
+            checkbox.click();
+        } catch (Exception e) {
+            // Use JavaScript click as a last resort
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkbox);
+        }
+
+        // Define Confirm Button
+        WebElement confirmButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[contains(@class, 'btn btn-primary') and contains(text(), '下一步')]")));
+        // Scroll the confirm button into view
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", confirmButton);
+        // Wait for the confirm button to be clickable
+        wait.until(ExpectedConditions.elementToBeClickable(confirmButton));
+
+        // Click the confirm button
+        try {
+            confirmButton.click();
+        } catch (Exception e) {
+            // Use JavaScript click as a last resort
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", confirmButton);
+        }
+
+        // Wait for redirect
+        wait.until(ExpectedConditions.urlToBe(urlAfter));
 
     }
 
