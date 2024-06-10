@@ -5,7 +5,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -14,7 +13,7 @@ public class HSH extends Catalog {
 
     public HSH(WebDriver driver) {
         this.driver = driver;
-        verifySteps();
+        verify();
 
     }
 
@@ -50,7 +49,7 @@ public class HSH extends Catalog {
     }
 
     @Override
-    public void verifySteps() {
+    public void verify() {
         String urlBefore = "https://traffic.hchpb.gov.tw/10/13";
         String urlAfter = "https://traffic.hchpb.gov.tw/report";
 

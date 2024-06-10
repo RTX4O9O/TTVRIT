@@ -9,7 +9,7 @@ public class PEH extends Catalog {
     }
 
     @Override
-    public void verifySteps() {
+    public void verify() {
 
     }
 }

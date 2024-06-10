@@ -2,12 +2,11 @@ package me.rtx4090.reportWebsite;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 public abstract class Catalog {
     WebDriver driver;
     public abstract void getElement();
-    public abstract void verifySteps();
+    public abstract void verify();
 
     WebElement reporterName;
     WebElement reporterID;

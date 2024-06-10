@@ -9,7 +9,7 @@ public class HSC extends Catalog {
     }
 
     @Override
-    public void verifySteps() {
+    public void verify() {
 
     }
 

@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="consider verify steps of report websites">
+    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="testing&#10;automatically do confirmation and successfully get all elements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/profile/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/profile/ProfilePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/CHY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/CHY.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/CWH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/CWH.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/CYI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/CYI.java" afterDir="false" />
@@ -30,7 +31,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TXG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TXG.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TYC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TYC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/YLH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/YLH.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/me/rtx4090/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/rtx4090/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +98,7 @@
       <recent name="E:\RTXs Lab\git\TTVRIT maven\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -152,7 +152,8 @@
       <workItem from="1717927479348" duration="2082000" />
       <workItem from="1717932860388" duration="2215000" />
       <workItem from="1717937961598" duration="8083000" />
-      <workItem from="1717994699067" duration="7722000" />
+      <workItem from="1717994699067" duration="8167000" />
+      <workItem from="1718004147283" duration="672000" />
     </task>
     <task id="LOCAL-00001" summary="idk wtf did i fix but i did fix something">
       <option name="closed" value="true" />
@@ -314,7 +315,31 @@
       <option name="project" value="LOCAL" />
       <updated>1718000026813</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="change the way webdriver is provided">
+      <option name="closed" value="true" />
+      <created>1718003842939</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1718003842939</updated>
+    </task>
+    <task id="LOCAL-00022" summary="replace Select with WebElement">
+      <option name="closed" value="true" />
+      <created>1718003911310</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1718003911310</updated>
+    </task>
+    <task id="LOCAL-00023" summary="testing&#10;automatically do confirmation and successfully get all elements">
+      <option name="closed" value="true" />
+      <created>1718003990862</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1718003990862</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,6 +378,9 @@
     <MESSAGE value="fix format issue" />
     <MESSAGE value="merge" />
     <MESSAGE value="consider verify steps of report websites" />
-    <option name="LAST_COMMIT_MESSAGE" value="consider verify steps of report websites" />
+    <MESSAGE value="change the way webdriver is provided" />
+    <MESSAGE value="replace Select with WebElement" />
+    <MESSAGE value="testing&#10;automatically do confirmation and successfully get all elements" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing&#10;automatically do confirmation and successfully get all elements" />
   </component>
 </project>

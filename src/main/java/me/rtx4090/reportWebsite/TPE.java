@@ -9,7 +9,7 @@ public class TPE extends Catalog {
     }
 
     @Override
-    public void verifySteps() {
+    public void verify() {
 
     }
 }
