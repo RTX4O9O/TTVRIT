@@ -12,10 +12,21 @@ public class ReportPage {
     public static String regionCode = "DEFAULT";
 
     public ReportPage() {
-        reportPanel.setLayout(new GridLayout(2, 1));
+        reportPanel.setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.weightx = 1.0;
+        gbc.weighty = 0.25;
+        gbc.fill = GridBagConstraints.BOTH;
+        reportPanel.add(regionSelectorInstance.regionSelector, gbc);
+
         setRegionSelectorAction();
         setSubmitButtonAction();
-        reportPanel.add(regionSelectorInstance.regionSelector);
+
+        gbc.gridy = 1;
+        gbc.weighty = 0.75;
+        reportPanel.add(contentScrollPaneInstance.scrollPane, gbc);
     }
 
     private void setRegionSelectorAction() {
@@ -28,7 +39,7 @@ public class ReportPage {
 
     void setSubmitButtonAction() {
         submitButton.button.addActionListener(e -> {
-
+            // Action for submit button
         });
     }
 
@@ -39,12 +50,21 @@ public class ReportPage {
                 containsPane = true;
             }
         }
-        if(containsPane){
+        if (containsPane) {
             reportPanel.remove(contentScrollPaneInstance.scrollPane);
         }
         contentScrollPaneInstance = new ContentScrollPane(regionCode);
-        reportPanel.add(contentScrollPaneInstance.scrollPane);
 
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.weightx = 1.0;
+        gbc.weighty = 0.75;
+        gbc.fill = GridBagConstraints.BOTH;
+        reportPanel.add(contentScrollPaneInstance.scrollPane, gbc);
+
+        reportPanel.revalidate();
+        reportPanel.repaint();
     }
 
 }

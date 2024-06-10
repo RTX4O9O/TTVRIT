@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="ReportPage now refreshes when new profile from ProfilePage is selected">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ReportPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ReportPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/SubmitButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/SubmitButton.java" afterDir="false" />
-    </list>
+    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="Basic GUIs for reporting" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,7 +129,7 @@
       <workItem from="1717932860388" duration="2215000" />
       <workItem from="1717937961598" duration="8083000" />
       <workItem from="1717994699067" duration="8167000" />
-      <workItem from="1718004147283" duration="7238000" />
+      <workItem from="1718004147283" duration="7542000" />
     </task>
     <task id="LOCAL-00001" summary="idk wtf did i fix but i did fix something">
       <option name="closed" value="true" />
@@ -440,7 +435,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718010361770</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Basic GUIs for reporting">
+      <option name="closed" value="true" />
+      <created>1718011812499</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1718011812499</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,7 +461,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add Test area back" />
     <MESSAGE value="fix NullPointerException in ReportPage.java" />
     <MESSAGE value="define all elements in HSH report site" />
     <MESSAGE value="change regions element catalog&#10;add element catalog for all regions&#10;rename catalog file" />
@@ -483,6 +485,7 @@
     <MESSAGE value="make ReportPage static" />
     <MESSAGE value="create public String ReportPage.regionCode" />
     <MESSAGE value="ReportPage now refreshes when new profile from ProfilePage is selected" />
-    <option name="LAST_COMMIT_MESSAGE" value="ReportPage now refreshes when new profile from ProfilePage is selected" />
+    <MESSAGE value="Basic GUIs for reporting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic GUIs for reporting" />
   </component>
 </project>
