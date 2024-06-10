@@ -23,7 +23,7 @@ public class HSH extends Catalog {
         reporterName = driver.findElement(By.id("name"));
         reporterID = driver.findElement(By.id("idcard"));
         reporterEmail = driver.findElement(By.id("email"));
-        reporterPhone = driver.findElement(By.id("tel"));
+        reporterNumber = driver.findElement(By.id("tel"));
         reporterAddress = driver.findElement(By.id("address2"));
 
         caseDate = driver.findElement(By.id("select2-report_date-container"));
