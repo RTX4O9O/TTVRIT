@@ -7,6 +7,7 @@ import me.rtx4090.ProfileInUse;
 import me.rtx4090.Profiles;
 import me.rtx4090.gui.Notify;
 import me.rtx4090.gui.*;
+import me.rtx4090.gui.tabs.report.ReportPage;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,18 +18,18 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Map;
 
-public class ProfilePage implements ActionListener {
-    Profiles profilesInstance = new Profiles();
-    public JPanel profilePanel = new JPanel();
-    JTextField profileNicknameField;
-    JTextField nameField;
-    JTextField idField;
-    JTextField emailField;
-    JTextField phoneField;
-    JTextField addressField;
-    JLabel hintLabel;
-    JButton createProfileButton;
-    JPanel existedProfilesPanel;
+public class ProfilePage {
+    static Profiles profilesInstance = new Profiles();
+    public static JPanel profilePanel = new JPanel();
+    static JTextField profileNicknameField;
+    static JTextField nameField;
+    static JTextField idField;
+    static JTextField emailField;
+    static JTextField phoneField;
+    static JTextField addressField;
+    static JLabel hintLabel;
+    static JButton createProfileButton;
+    static JPanel existedProfilesPanel;
 
     public ProfilePage() {
 
@@ -129,12 +130,44 @@ public class ProfilePage implements ActionListener {
                 gbc.gridx = 1;
                 personalInfoInput.add(addressField, gbc);
             }
-            //提示介面與新增按鈕
+
             hintLabel = new JLabel();
             hintLabel.setVisible(false);
             hintLabel.setHorizontalAlignment(JLabel.CENTER);
             createProfileButton = new JButton("新增檔案");
-            createProfileButton.addActionListener(this);
+            createProfileButton.addActionListener(e -> {
+                hintLabel.setFont(new Font("SimSun", Font.PLAIN, 12));
+                if (allTextfieldFilled()) {
+
+                    Profile profile = new Profile(nameField.getText(), idField.getText(), emailField.getText(), phoneField.getText(), addressField.getText());
+                    addProfile(profile, profileNicknameField.getText());
+                    hintLabel.setText("新增成功");
+                    hintLabel.setVisible(true);
+                    nameField.setText("");
+                    idField.setText("");
+                    emailField.setText("");
+                    phoneField.setText("");
+                    addressField.setText("");
+
+                } else {
+                    if (nameField.getText().isEmpty()) {
+                        hintLabel.setText("請輸入姓名");
+                        hintLabel.setVisible(true);
+                    } else if (idField.getText().isEmpty()) {
+                        hintLabel.setText("請輸入身分證字號");
+                        hintLabel.setVisible(true);
+                    } else if (emailField.getText().isEmpty()) {
+                        hintLabel.setText("請輸入電子郵件");
+                        hintLabel.setVisible(true);
+                    } else if (phoneField.getText().isEmpty()) {
+                        hintLabel.setText("請輸入電話號碼");
+                        hintLabel.setVisible(true);
+                    } else if (addressField.getText().isEmpty()) {
+                        hintLabel.setText("請輸入聯絡地址");
+                        hintLabel.setVisible(true);
+                    }
+                }
+            });
             createProfileButton.setBackground(new Color(0, 0, 255));
             createProfileButton.setFont(new Font("SimSun", Font.PLAIN, 18));
             createProfileButton.setForeground(new Color(225, 235, 241));
@@ -200,7 +233,7 @@ public class ProfilePage implements ActionListener {
 
     }
 
-    void addProfile(Profile profile, String nickname) {
+    static void addProfile(Profile profile, String nickname) {
         if (nickname.isEmpty()) {
             int profileCount = profilesInstance.savedProfiles().size();
             nickname = "Profile " + profileCount;
@@ -221,7 +254,7 @@ public class ProfilePage implements ActionListener {
         updateExistedProfilesPanel();
     }
 
-    void updateExistedProfilesPanel() {
+    static void updateExistedProfilesPanel() {
         // Clear all components from the panel
         existedProfilesPanel.removeAll();
 
@@ -260,7 +293,7 @@ public class ProfilePage implements ActionListener {
         existedProfilesPanel.repaint();
     }
 
-    void deleteProfile(String nickname) {
+    static void deleteProfile(String nickname) {
         //delete from profileInstance
         Map<String, Profile> profiles = profilesInstance.savedProfiles();
         profiles.remove(nickname);
@@ -277,58 +310,22 @@ public class ProfilePage implements ActionListener {
         updateExistedProfilesPanel();
     }
 
-    void useProfile(String nickname) {
+    static void useProfile(String nickname) {
         Profile profile = profilesInstance.savedProfiles().get(nickname);
         ProfileInUse.setProfileInUse(profile, nickname);
         Notify.normal("使用中的檔案已切換為 " + nickname);
+
     }
 
 
-    boolean allTextfieldFilled() {
+    static boolean allTextfieldFilled() {
         return !nameField.getText().isEmpty() && !idField.getText().isEmpty() && !emailField.getText().isEmpty() && !phoneField.getText().isEmpty() && !addressField.getText().isEmpty();
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        //create profile
-        if (e.getSource() == createProfileButton) {
-            hintLabel.setFont(new Font("SimSun", Font.PLAIN, 12));
-            if (allTextfieldFilled()) {
 
-                Profile profile = new Profile(nameField.getText(), idField.getText(), emailField.getText(), phoneField.getText(), addressField.getText());
-                addProfile(profile, profileNicknameField.getText());
-                hintLabel.setText("新增成功");
-                hintLabel.setVisible(true);
-                nameField.setText("");
-                idField.setText("");
-                emailField.setText("");
-                phoneField.setText("");
-                addressField.setText("");
+    static RoundBorder roundBorder = new RoundBorder(15, new Color(37, 150, 190));
 
-            } else {
-                if (nameField.getText().isEmpty()) {
-                    hintLabel.setText("請輸入姓名");
-                    hintLabel.setVisible(true);
-                } else if (idField.getText().isEmpty()) {
-                    hintLabel.setText("請輸入身分證字號");
-                    hintLabel.setVisible(true);
-                } else if (emailField.getText().isEmpty()) {
-                    hintLabel.setText("請輸入電子郵件");
-                    hintLabel.setVisible(true);
-                } else if (phoneField.getText().isEmpty()) {
-                    hintLabel.setText("請輸入電話號碼");
-                    hintLabel.setVisible(true);
-                } else if (addressField.getText().isEmpty()) {
-                    hintLabel.setText("請輸入聯絡地址");
-                    hintLabel.setVisible(true);
-                }
-            }
-        }
-    }
-
-    RoundBorder roundBorder = new RoundBorder(15, new Color(37, 150, 190));
-
-    private void setSizeLabel(JLabel label) {
+    private static void setSizeLabel(JLabel label) {
         FontMetrics metrics = label.getFontMetrics(label.getFont());
         int width = metrics.stringWidth(label.getText());
         int height = metrics.getHeight();
@@ -340,7 +337,7 @@ public class ProfilePage implements ActionListener {
         label.setFont(new Font("SimSun", Font.PLAIN, 15));
     }
 
-    private void setTextField(JTextField textField) {
+    private static void setTextField(JTextField textField) {
         textField.setBorder(roundBorder);
         textField.setForeground(new Color(170, 106, 255));
         textField.setFont(new Font("Dialog", Font.PLAIN, 18));
