@@ -23,11 +23,8 @@ public class MainWindow extends JFrame {
 
         JTabbedPane tabbedPane = new JTabbedPane();
         tabbedPane.add(reportPanel, "Report");
-        System.out.println("Report panel added");
         tabbedPane.add(profilePanel, "Profile");
-        System.out.println("Profile panel added");
         tabbedPane.add(historyPanel, "Report History");
-        System.out.println("History panel added");
 
         this.add(tabbedPane, BorderLayout.CENTER);
 
