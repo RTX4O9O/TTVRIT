@@ -7,9 +7,8 @@ public class ReportPage {
 
     public JPanel reportPanel = new JPanel();
     RegionSelector regionSelectorInstance = new RegionSelector();
-    ContentScrollPane contentScrollPaneInstance = new ContentScrollPane("TPE");
+    ContentScrollPane contentScrollPaneInstance = new ContentScrollPane("DEFAULT");
     SubmitButton submitButton = new SubmitButton();
-    JLabel profileInUse = new JLabel();
 
     public ReportPage() {
         Driver driver = new Driver();
