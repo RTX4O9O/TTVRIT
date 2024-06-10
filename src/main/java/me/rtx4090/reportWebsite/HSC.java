@@ -7,4 +7,10 @@ public class HSC extends Catalog {
     public void getElement(WebDriver driver) {
 
     }
+
+    @Override
+    public void verifySteps() {
+
+    }
+
 }

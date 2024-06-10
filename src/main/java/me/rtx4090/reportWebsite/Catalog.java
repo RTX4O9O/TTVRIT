@@ -6,7 +6,9 @@ import org.openqa.selenium.support.ui.Select;
 
 public abstract class Catalog {
     public abstract void getElement(WebDriver driver);
-    String url;
+    public abstract void verifySteps();
+    String urlBefore;
+    String urlAfter;
     WebElement reporterName;
     WebElement reporterID;
     WebElement reporterEmail;

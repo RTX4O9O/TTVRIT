@@ -9,7 +9,7 @@ public class HSH extends Catalog {
 
     @Override
     public void getElement(WebDriver driver) {
-        url = "https://traffic.hchpb.gov.tw/index.php?catid=11";
+
 
         reporterName = driver.findElement(By.id("name"));
         reporterID = driver.findElement(By.id("idcard"));
@@ -37,6 +37,11 @@ public class HSH extends Catalog {
         captcha = driver.findElement(By.id("checknum"));
         captchaImg = driver.findElement(By.className("captcha_img"));
         submitButton = driver.findElement(By.id("submit"));
+    }
+
+    @Override
+    public void verifySteps() {
+
     }
 
 }

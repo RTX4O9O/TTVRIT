@@ -7,4 +7,9 @@ public class TXG extends Catalog {
     public void getElement(WebDriver driver) {
 
     }
+
+    @Override
+    public void verifySteps() {
+
+    }
 }
