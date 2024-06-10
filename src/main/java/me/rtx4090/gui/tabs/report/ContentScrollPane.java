@@ -5,7 +5,7 @@ import me.rtx4090.reportWebsite.*;
 import org.openqa.selenium.WebDriver;
 
 import javax.swing.*;
-import java.awt.*;
+
 import java.time.LocalDateTime;
 
 public class ContentScrollPane {
@@ -102,10 +102,13 @@ public class ContentScrollPane {
 
         JLabel profileInUse = new JLabel("目前使用身分：" + ProfileInUse.profileNickname);
         panel.add(profileInUse);
-
         panel.add(CaseTime());
+        panel.add(LicenseNum());
+        panel.add(Location());
 
+        panel.add(SubmitButton.button);
     }
+
     JPanel CaseTime() {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
@@ -147,5 +150,51 @@ public class ContentScrollPane {
 
         return panel;
 
+    }
+
+    JPanel LicenseNum() {
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
+
+        JLabel licenseNumLabel = new JLabel("車牌號碼：");
+        JTextField licenseNumField1 = new JTextField(3);
+        JLabel licenseNumFieldDash = new JLabel("-");
+        JTextField licenseNumField2 = new JTextField(4);
+
+        panel.add(licenseNumLabel);
+        panel.add(licenseNumField1);
+        panel.add(licenseNumFieldDash);
+        panel.add(licenseNumField2);
+
+        return panel;
+    }
+
+    JPanel Location() {
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+
+        JPanel upper = new JPanel();
+        JPanel lower = new JPanel();
+        upper.setLayout(new BoxLayout(upper, BoxLayout.X_AXIS));
+        lower.setLayout(new BoxLayout(lower, BoxLayout.X_AXIS));
+
+        JLabel cityLabel = new JLabel("鄉鎮市區：");
+        JTextField cityField = new JTextField(3);
+        JLabel road = new JLabel("街道：");
+        JTextField roadField = new JTextField(4);
+
+        upper.add(cityLabel);
+        upper.add(cityField);
+        upper.add(road);
+        upper.add(roadField);
+
+        JLabel locationLabel = new JLabel("路段 / 號 / 說明：");
+        JTextField locationField = new JTextField(10);
+        lower.add(locationLabel);
+        lower.add(locationField);
+
+        panel.add(upper);
+        panel.add(lower);
+        return panel;
     }
 }

@@ -12,8 +12,7 @@ public class ReportPage {
     public static String regionCode = "DEFAULT";
 
     public ReportPage() {
-        Driver driver = new Driver();
-        reportPanel.setLayout(new GridLayout(3, 1));
+        reportPanel.setLayout(new GridLayout(2, 1));
         setRegionSelectorAction();
         setSubmitButtonAction();
         reportPanel.add(regionSelectorInstance.regionSelector);
