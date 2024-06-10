@@ -13,9 +13,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class Test {
+    static WebDriver edgeDriver;
     public static void main(String[] args) {
         // Create a new instance of the Edge driver
-        WebDriver edgeDriver = new EdgeDriver();
+        edgeDriver = new EdgeDriver();
 
 
         edgeDriver.get("https://traffic.hchpb.gov.tw/10/13");
@@ -85,6 +86,18 @@ public class Test {
         WebElement captchaImg = findElement(edgeDriver, By.className("captcha_img"));
         WebElement submitButton = findElement(edgeDriver, By.id("submit"));
 
+        reporterName.sendKeys("王小明");
+        reporterID.sendKeys("A123456789");
+        reporterEmail.sendKeys("example@email.tw");
+        reporterPhone.sendKeys("0900000000");
+        reporterAddress.sendKeys("台北市中正區重慶南路一段122號");
+
+        WebElement dropdown = edgeDriver.findElement(By.id("select2-report_date-container"));
+        dropdown.click();
+        WebElement option = edgeDriver.findElement(By.xpath("//option[contains(text(), '" + "2024-06-08" + "')]")); // replace "Option Text" with the actual visible text of the option you want to select
+        option.click();
+
+        licensePlateNum.sendKeys("ABC-1234");
 
     }
     private static WebElement findElement(WebDriver driver, By by) {
@@ -97,5 +110,15 @@ public class Test {
             return null;
         }
     }
+/*    private static void selectDropdown(WebElement webElement, String optionText) {
+
+        String dropdownID = webElement.getAttribute("id");
+        // Assume driver is initialized
+        WebElement dropdown = edgeDriver.findElement(By.id(dropdownID)); // replace "dropdownId" with the actual id of the dropdown
+        dropdown.click(); // click on the dropdown to show the options
+
+        WebElement option = edgeDriver.findElement(By.xpath("//option[contains(text(), '" + optionText + "')]")); // replace "Option Text" with the actual visible text of the option you want to select
+        option.click(); // click on the option to select it
+    }*/
 
 }
