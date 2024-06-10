@@ -4,32 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="change regions element catalog&#10;add element catalog for all regions&#10;rename catalog file">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/Catalog.java" afterDir="false" />
+    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="fix format issue">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/RoundBorder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/CHY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/CHY.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/CWH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/CWH.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/CYI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/CYI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/HSC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/HSC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/HSH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/HSH.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/HWA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/HWA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/ILN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/ILN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/IUH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/IUH.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/KHH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/KHH.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/KLU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/KLU.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/KMN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/KMN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/LNN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/LNN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/MAL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/MAL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/NTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/NTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/PEH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/PEH.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TNN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TNN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TPE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TPE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TPH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TPH.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TTT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TTT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TXG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TXG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TYC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TYC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/YLH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/YLH.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/Driver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,27 +50,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/RTXs Lab/git/TTVRIT maven/src/main/java/me/rtx4090/reportWebsite/Catalog.java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "two.files.diff.last.used.file": "E:/RTXs Lab/git/TTVRIT maven/src/main/java/me/rtx4090/reportWebsite/Catalog.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/RTXs Lab/git/TTVRIT maven/src/main/java/me/rtx4090/reportWebsite/Catalog.java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;E:/RTXs Lab/git/TTVRIT maven/src/main/java/me/rtx4090/reportWebsite/Catalog.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\RTXs Lab\git\TTVRIT maven\src\main\resources" />
@@ -150,7 +129,8 @@
       <workItem from="1717901743931" duration="1458000" />
       <workItem from="1717927479348" duration="2082000" />
       <workItem from="1717932860388" duration="2215000" />
-      <workItem from="1717937961598" duration="7644000" />
+      <workItem from="1717937961598" duration="8083000" />
+      <workItem from="1717994699067" duration="1669000" />
     </task>
     <task id="LOCAL-00001" summary="idk wtf did i fix but i did fix something">
       <option name="closed" value="true" />
@@ -280,7 +260,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717944113231</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="make all catalogs extend Catalog.java">
+      <option name="closed" value="true" />
+      <created>1717946133932</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1717946133932</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix format issue">
+      <option name="closed" value="true" />
+      <created>1717946280413</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1717946280413</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,6 +311,8 @@
     <MESSAGE value="fix NullPointerException in ReportPage.java" />
     <MESSAGE value="define all elements in HSH report site" />
     <MESSAGE value="change regions element catalog&#10;add element catalog for all regions&#10;rename catalog file" />
-    <option name="LAST_COMMIT_MESSAGE" value="change regions element catalog&#10;add element catalog for all regions&#10;rename catalog file" />
+    <MESSAGE value="make all catalogs extend Catalog.java" />
+    <MESSAGE value="fix format issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix format issue" />
   </component>
 </project>
