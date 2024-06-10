@@ -22,7 +22,6 @@ public class ReportPage {
         reportPanel.add(regionSelectorInstance.regionSelector, gbc);
 
         setRegionSelectorAction();
-        setSubmitButtonAction();
 
         gbc.gridy = 1;
         gbc.weighty = 0.75;
@@ -34,12 +33,6 @@ public class ReportPage {
             regionSelectorInstance.regionCode = regionSelectorInstance.regions.get(regionSelectorInstance.regionSelector.getSelectedItem().toString());
             regionCode = regionSelectorInstance.regionCode;
             refreshScrollPane(regionCode);
-        });
-    }
-
-    void setSubmitButtonAction() {
-        submitButton.button.addActionListener(e -> {
-            // Action for submit button
         });
     }
 

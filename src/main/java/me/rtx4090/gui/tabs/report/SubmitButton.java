@@ -6,7 +6,9 @@ public class SubmitButton {
     public static JButton button = new JButton("Submit");
 
     SubmitButton() {
-
+        button.addActionListener(e -> {
+            // Action for submit button
+        });
     }
 
 }
