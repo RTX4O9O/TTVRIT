@@ -214,10 +214,6 @@ public class ProfilePage {
             // create panel for existed profiles
             {
                 updateExistedProfilesPanel();
-
-
-                //add panels to scroll area
-
             }
             scrollPane = new JScrollPane(existedProfilesPanel);
         }
@@ -314,7 +310,7 @@ public class ProfilePage {
         Profile profile = profilesInstance.savedProfiles().get(nickname);
         ProfileInUse.setProfileInUse(profile, nickname);
         Notify.normal("使用中的檔案已切換為 " + nickname);
-
+        ReportPage.refreshScrollPane(ReportPage.regionCode);
     }
 
 
