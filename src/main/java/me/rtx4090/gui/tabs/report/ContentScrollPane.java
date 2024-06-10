@@ -224,6 +224,18 @@ public class ContentScrollPane {
         if (ReportPage.allFilled()) {
             catalog.getElement();
 
+            // fill in personal information
+            catalog.reporterName.sendKeys(ProfileInUse.getProfileInUse().getName());
+            catalog.reporterID.sendKeys(ProfileInUse.getProfileInUse().getId());
+            catalog.reporterEmail.sendKeys(ProfileInUse.getProfileInUse().getEmail());
+            catalog.reporterNumber.sendKeys(ProfileInUse.getProfileInUse().getNumber());
+            catalog.reporterAddress.sendKeys(ProfileInUse.getProfileInUse().getAddress());
+
+            // fill in case information **BASED ON HSH**
+
+
+
+
 
         } else {
             Notify.error("請先將所有欄位填寫完畢。");
