@@ -8,4 +8,9 @@ public class Main {
         MainWindow appwindow = new MainWindow();
         //Notify.error();
     }
+    public static Profile profileInUse;
+    public static void setProfileInUse(Profile profile) {
+        profileInUse = profile;
+        System.out.println(profileInUse.getName());
+    }
 }
