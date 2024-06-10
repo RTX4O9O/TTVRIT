@@ -6,10 +6,7 @@ import me.rtx4090.gui.tabs.report.Driver;
 public class Main {
     public static void main(String[] args) {
         MainWindow appwindow = new MainWindow();
+        //initProfileInUse();
         //Notify.error();
-    }
-    public static Profile profileInUse;
-    public static void setProfileInUse(Profile profile) {
-        profileInUse = profile;
     }
 }
