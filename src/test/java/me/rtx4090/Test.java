@@ -1,11 +1,8 @@
 package me.rtx4090;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,6 +11,7 @@ import java.time.Duration;
 
 public class Test {
     static WebDriver edgeDriver;
+
     public static void main(String[] args) {
         // Create a new instance of the Edge driver
         edgeDriver = new EdgeDriver();
@@ -21,7 +19,7 @@ public class Test {
 
         edgeDriver.get("https://traffic.hchpb.gov.tw/10/13");
 
-        WebDriverWait wait = new WebDriverWait(edgeDriver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(edgeDriver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.jsReturnsValue("return document.readyState=='complete';"));
 
         // Scroll the checkbox into view
@@ -92,14 +90,12 @@ public class Test {
         reporterPhone.sendKeys("0900000000");
         reporterAddress.sendKeys("台北市中正區重慶南路一段122號");
 
-        WebElement dropdown = edgeDriver.findElement(By.id("select2-report_date-container"));
-        dropdown.click();
-        WebElement option = edgeDriver.findElement(By.xpath("//option[contains(text(), '" + "2024-06-08" + "')]")); // replace "Option Text" with the actual visible text of the option you want to select
-        option.click();
+        //edgeDriver.manage().window().maximize();
+        selectDropdown("span#select2-report_date-container", "2024-06-07");
 
-        licensePlateNum.sendKeys("ABC-1234");
 
     }
+
     private static WebElement findElement(WebDriver driver, By by) {
         try {
             WebElement element = driver.findElement(by);
@@ -110,15 +106,32 @@ public class Test {
             return null;
         }
     }
-/*    private static void selectDropdown(WebElement webElement, String optionText) {
 
-        String dropdownID = webElement.getAttribute("id");
-        // Assume driver is initialized
-        WebElement dropdown = edgeDriver.findElement(By.id(dropdownID)); // replace "dropdownId" with the actual id of the dropdown
-        dropdown.click(); // click on the dropdown to show the options
+    private static void selectDropdown(String cssSelectArgs, String optionText) {
+        WebDriverWait wait = new WebDriverWait(edgeDriver, Duration.ofSeconds(2));
 
-        WebElement option = edgeDriver.findElement(By.xpath("//option[contains(text(), '" + optionText + "')]")); // replace "Option Text" with the actual visible text of the option you want to select
-        option.click(); // click on the option to select it
-    }*/
+        // Step 1: Scroll the dropdown into view using JavaScript
+        WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(cssSelectArgs)));
+        ((JavascriptExecutor) edgeDriver).executeScript("arguments[0].scrollIntoView(true);", dropdown);
+
+
+        // Use Actions class to click on the dropdown
+
+        Actions actions = new Actions(edgeDriver);
+        actions.moveToElement(dropdown).click().perform();
+
+        try {
+            // Step 2: Wait for the options to be displayed
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.select2-dropdown")));
+
+            // Step 3: Scroll the desired option into view and click it
+            WebElement searchField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input.select2-search__field")));
+            searchField.sendKeys(optionText);
+            searchField.sendKeys(Keys.ENTER);
+        } catch (Exception e) {
+            selectDropdown(cssSelectArgs, optionText);
+        }
+
+    }
 
 }
