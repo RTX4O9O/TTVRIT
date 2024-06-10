@@ -170,7 +170,6 @@ public class ProfilePage implements ActionListener {
 
         //right part
         JPanel existedProfiles = new JPanel();
-        existedProfiles.setBackground(Color.red);
         existedProfiles.setLayout(new FlowLayout());
         //whole scroll area
         JScrollPane scrollPane;
@@ -180,40 +179,7 @@ public class ProfilePage implements ActionListener {
             existedProfilesPanel.setLayout(new GridLayout(64, 1, 0, 2));
             // create panel for existed profiles
             {
-
-                for (String key : profilesInstance.savedProfiles().keySet()) {
-                    JPanel jPanel = new JPanel();
-                    jPanel.setName(key);
-                    jPanel.setLayout(new GridBagLayout());
-                    gbc.fill = GridBagConstraints.HORIZONTAL;
-
-                    //add label
-                    JLabel nameLabel = new JLabel(key);
-                    gbc.gridx = 0;
-                    gbc.gridy = 0;
-                    gbc.gridwidth = 4;
-                    gbc.weightx = 0.4;
-                    jPanel.add(nameLabel, gbc);
-
-                    //add buttons
-                    JButton deleteButton = new JButton("刪除");
-                    deleteButton.setBackground(Color.RED);
-                    deleteButton.addActionListener(e -> deleteProfile(key));
-                    gbc.gridx = 4;
-                    gbc.gridwidth = 1;
-                    gbc.weightx = 0.1;
-                    jPanel.add(deleteButton, gbc);
-
-                    JButton useButton = new JButton("使用");
-                    useButton.setBackground(Color.GREEN);
-                    useButton.addActionListener(e -> useProfile(key));
-                    gbc.gridx = 5;
-                    gbc.gridwidth = 1;
-                    gbc.weightx = 0.1;
-                    jPanel.add(useButton, gbc);
-
-                    existedProfilesPanel.add(jPanel);
-                }
+                updateExistedProfilesPanel();
 
 
                 //add panels to scroll area
@@ -261,36 +227,30 @@ public class ProfilePage implements ActionListener {
         // Add all profiles to the panel
         for (String key : profilesInstance.savedProfiles().keySet()) {
             JPanel jPanel = new JPanel();
+            jPanel.setBackground(new Color(225, 235, 241));
             jPanel.setName(key);
-            jPanel.setLayout(new GridBagLayout());
-            GridBagConstraints gbc = new GridBagConstraints();
-            gbc.fill = GridBagConstraints.HORIZONTAL;
+            jPanel.setLayout(new GridLayout(1,3,0,0));
 
             // Add label
             JLabel nameLabel = new JLabel(key);
-            gbc.gridx = 0;
-            gbc.gridy = 0;
-            gbc.gridwidth = 4;
-            gbc.weightx = 0.4;
-            jPanel.add(nameLabel, gbc);
+            nameLabel.setHorizontalAlignment(SwingConstants.LEFT);
+            nameLabel.setPreferredSize(new Dimension(120,20));
+            nameLabel.setFont(new Font("SimSun", Font.PLAIN, 18));
+            nameLabel.setBackground(new Color(225, 235, 241));
+            nameLabel.setForeground(new Color(170, 106, 255));
+            jPanel.add(nameLabel);
 
             // Add buttons
             JButton deleteButton = new JButton("刪除");
-            deleteButton.setBackground(Color.RED);
+            deleteButton.setBackground(new Color(255,122,122));
             deleteButton.addActionListener(e -> deleteProfile(key));
-            gbc.gridx = 4;
-            gbc.gridwidth = 1;
-            gbc.weightx = 0.1;
-            jPanel.add(deleteButton, gbc);
+            jPanel.add(deleteButton);
 
             JButton useButton = new JButton("使用");
-            useButton.setBackground(Color.GREEN);
+            useButton.setBackground(new Color(122,255,122));
             useButton.addActionListener(e -> useProfile(key));
-            gbc.gridx = 5;
-            gbc.gridwidth = 1;
-            gbc.weightx = 0.1;
-            jPanel.add(useButton, gbc);
-
+            jPanel.add(useButton);
+            existedProfilesPanel.setBackground(new Color(225, 235, 241));
             existedProfilesPanel.add(jPanel);
         }
 
