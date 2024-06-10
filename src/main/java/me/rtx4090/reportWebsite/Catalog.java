@@ -4,35 +4,34 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public abstract class Catalog {
-    WebDriver driver;
+    public WebDriver driver;
     public abstract void getElement();
     public abstract void verify();
 
-    WebElement reporterName;
-    WebElement reporterID;
-    WebElement reporterEmail;
-    WebElement reporterPhone;
-    WebElement reporterAddress;
+    public WebElement reporterName;
+    public WebElement reporterID;
+    public WebElement reporterEmail;
+    public WebElement reporterNumber;
+    public WebElement reporterAddress;
 
-    WebElement caseDate;
-    WebElement caseHour;
-    WebElement caseMinute;
+    public WebElement caseDate;
+    public WebElement caseHour;
+    public WebElement caseMinute;
 
-    WebElement licensePlateNum;
+    public WebElement licensePlateNum;
 
-    WebElement city;
-    WebElement road;
-    WebElement no;
+    public WebElement city;
+    public WebElement road;
+    public WebElement no;
 
-    WebElement reason;
+    public WebElement reason;
 
-    WebElement fileInput1;
-    WebElement fileInput2;
-    WebElement fileInput3;
-    WebElement fileInput4;
+    public WebElement fileInput1;
+    public WebElement fileInput2;
+    public WebElement fileInput3;
+    public WebElement fileInput4;
 
-    WebElement captcha;
-    WebElement captchaImg;
-    WebElement submitButton;
-
+    public WebElement captcha;
+    public WebElement captchaImg;
+    public WebElement submitButton;
 }
