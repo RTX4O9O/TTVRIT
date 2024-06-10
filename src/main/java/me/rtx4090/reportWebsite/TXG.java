@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 public class TXG extends Catalog {
     @Override
-    public void getElement(WebDriver driver) {
+    public void getElement() {
 
     }
 

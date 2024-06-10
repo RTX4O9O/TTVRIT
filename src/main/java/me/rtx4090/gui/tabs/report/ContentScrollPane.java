@@ -1,7 +1,7 @@
 package me.rtx4090.gui.tabs.report;
 
-import me.rtx4090.gui.Notify;
 import me.rtx4090.reportWebsite.*;
+import org.openqa.selenium.WebDriver;
 
 import javax.swing.*;
 
@@ -9,6 +9,7 @@ public class ContentScrollPane {
     private JPanel panel = new JPanel();
     public JScrollPane scrollPane = new JScrollPane(panel);
     Driver driver = new Driver();
+    WebDriver eDriver = driver.edgeDriver;
     ContentScrollPane(String regionCode) {
         Catalog catalog;
         switch (regionCode) {
@@ -25,7 +26,7 @@ public class ContentScrollPane {
                 catalog = new TYC();
                 break;
             case "HSH":
-                catalog = new HSH();
+                catalog = new HSH(eDriver);
                 break;
             case "HSC":
                 catalog = new HSC();
@@ -82,7 +83,7 @@ public class ContentScrollPane {
                 throw new IllegalArgumentException("Invalid region code: " + regionCode);
 
         }
-        catalog.getElement(driver.edgeDriver);
+        catalog.getElement();
         setupGUI();
 
     }

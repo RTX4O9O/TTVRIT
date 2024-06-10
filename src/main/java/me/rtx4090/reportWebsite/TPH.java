@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 public class TPH extends Catalog {
     @Override
-    public void getElement(WebDriver driver) {
+    public void getElement() {
 
     }
 

@@ -5,27 +5,27 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public abstract class Catalog {
-    public abstract void getElement(WebDriver driver);
+    WebDriver driver;
+    public abstract void getElement();
     public abstract void verifySteps();
-    String urlBefore;
-    String urlAfter;
+
     WebElement reporterName;
     WebElement reporterID;
     WebElement reporterEmail;
     WebElement reporterPhone;
     WebElement reporterAddress;
 
-    Select caseDate;
-    Select caseHour;
-    Select caseMinute;
+    WebElement caseDate;
+    WebElement caseHour;
+    WebElement caseMinute;
 
     WebElement licensePlateNum;
 
-    Select city;
-    Select road;
+    WebElement city;
+    WebElement road;
     WebElement no;
 
-    Select reason;
+    WebElement reason;
 
     WebElement fileInput1;
     WebElement fileInput2;

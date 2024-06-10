@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="merge">
+    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="consider verify steps of report websites">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/CHY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/CHY.java" afterDir="false" />
@@ -30,8 +30,8 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TXG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TXG.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TYC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/TYC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/YLH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/reportWebsite/YLH.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/rtx4090/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/rtx4090/Test.java" afterDir="false" />
     </list>
-    <list id="5c8dc976-d533-4962-8d36-f9fe5b55b82d" name="Changes by user" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +98,7 @@
       <recent name="E:\RTXs Lab\git\TTVRIT maven\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -152,7 +152,7 @@
       <workItem from="1717927479348" duration="2082000" />
       <workItem from="1717932860388" duration="2215000" />
       <workItem from="1717937961598" duration="8083000" />
-      <workItem from="1717994699067" duration="4133000" />
+      <workItem from="1717994699067" duration="7722000" />
     </task>
     <task id="LOCAL-00001" summary="idk wtf did i fix but i did fix something">
       <option name="closed" value="true" />
@@ -306,7 +306,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717997960063</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="consider verify steps of report websites">
+      <option name="closed" value="true" />
+      <created>1718000026813</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1718000026813</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,6 +352,7 @@
     <MESSAGE value="make all catalogs extend Catalog.java" />
     <MESSAGE value="fix format issue" />
     <MESSAGE value="merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge" />
+    <MESSAGE value="consider verify steps of report websites" />
+    <option name="LAST_COMMIT_MESSAGE" value="consider verify steps of report websites" />
   </component>
 </project>
