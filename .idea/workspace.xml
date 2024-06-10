@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="testing clicking element">
-      <change afterPath="$PROJECT_DIR$/src/test/java/me/rtx4090/ClickTheShit.java" afterDir="false" />
+    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="can now submit the date after element is clicked&#10;but i couldnt figure out how to click the element">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/me/rtx4090/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/rtx4090/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,7 @@
       <recent name="me.rtx4090" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ClickTheShit">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="ClickTheShit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="me.rtx4090.ClickTheShit" />
       <module name="TTVRIT" />
@@ -154,23 +153,7 @@
       <workItem from="1717937961598" duration="8083000" />
       <workItem from="1717994699067" duration="8167000" />
       <workItem from="1718004147283" duration="11857000" />
-      <workItem from="1718016397173" duration="7822000" />
-    </task>
-    <task id="LOCAL-00001" summary="idk wtf did i fix but i did fix something">
-      <option name="closed" value="true" />
-      <created>1716995517165</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1716995517165</updated>
-    </task>
-    <task id="LOCAL-00002" summary="init ReportPage.java">
-      <option name="closed" value="true" />
-      <created>1717396623718</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1717396623718</updated>
+      <workItem from="1718016397173" duration="10854000" />
     </task>
     <task id="LOCAL-00003" summary="add normal notify">
       <option name="closed" value="true" />
@@ -548,7 +531,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718024616104</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="testing clicking element">
+      <option name="closed" value="true" />
+      <created>1718024651876</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1718024651877</updated>
+    </task>
+    <task id="LOCAL-00051" summary="can now submit the date after element is clicked&#10;but i couldnt figure out how to click the element">
+      <option name="closed" value="true" />
+      <created>1718024711929</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1718024711929</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,7 +576,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add Main.profileInUse" />
     <MESSAGE value="delete testing purpose sout" />
     <MESSAGE value="merge with right branch" />
     <MESSAGE value="fix changing report region will cause cols increase" />
@@ -602,6 +600,7 @@
     <MESSAGE value="personal information submit" />
     <MESSAGE value="rename HSH.reporterPhone to reporterNumber" />
     <MESSAGE value="testing clicking element" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing clicking element" />
+    <MESSAGE value="can now submit the date after element is clicked&#10;but i couldnt figure out how to click the element" />
+    <option name="LAST_COMMIT_MESSAGE" value="can now submit the date after element is clicked&#10;but i couldnt figure out how to click the element" />
   </component>
 </project>

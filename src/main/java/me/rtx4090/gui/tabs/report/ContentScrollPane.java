@@ -3,10 +3,15 @@ package me.rtx4090.gui.tabs.report;
 import me.rtx4090.ProfileInUse;
 import me.rtx4090.gui.Notify;
 import me.rtx4090.reportWebsite.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import javax.swing.*;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.LocalDateTime;
 
 public class ContentScrollPane {
@@ -27,6 +32,8 @@ public class ContentScrollPane {
     private JTextField locationField;
     public Catalog catalog;
     public JButton submitButton;
+    private JTextField reasonField;
+    private JTextField verifyField;
 
     ContentScrollPane(String regionCode) {
 
@@ -106,24 +113,37 @@ public class ContentScrollPane {
                 throw new IllegalArgumentException("Invalid region code: " + regionCode);
 
         }
-        setupGUI();
+        try {
+            setupGUI();
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
 
 
     }
 
-    void setupGUI() {
+    void setupGUI() throws MalformedURLException {
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
         JLabel profileInUse = new JLabel("目前使用身分：" + ProfileInUse.profileNickname);
+
+        WebElement imgElement = eDriver.findElement(By.className("captcha_img"));
+        String imgSrc = imgElement.getAttribute("src");
+        ImageIcon verifyImage = new ImageIcon(new URL(imgSrc));
+        JLabel verifyImageLabel = new JLabel(verifyImage);
+
         panel.add(profileInUse);
-        panel.add(CaseTime());
-        panel.add(LicenseNum());
-        panel.add(Location());
+        panel.add(caseTime());
+        panel.add(licenseNum());
+        panel.add(location());
+        panel.add(reason());
+        panel.add(verifyImageLabel);
+        panel.add(verify());
 
         panel.add(submitButton);
     }
 
-    JPanel CaseTime() {
+    JPanel caseTime() {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
 
@@ -166,7 +186,7 @@ public class ContentScrollPane {
 
     }
 
-    JPanel LicenseNum() {
+    JPanel licenseNum() {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
 
@@ -183,7 +203,7 @@ public class ContentScrollPane {
         return panel;
     }
 
-    JPanel Location() {
+    JPanel location() {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
@@ -211,9 +231,33 @@ public class ContentScrollPane {
         panel.add(lower);
         return panel;
     }
+    JPanel reason() {
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
+
+        JLabel reasonLabel = new JLabel("違規事由：");
+        reasonField = new JTextField();
+        panel.add(reasonLabel);
+        panel.add(reasonField);
+
+        return panel;
+    }
+
+    JPanel verify() throws MalformedURLException {
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
+
+        JLabel verifyLabel = new JLabel("驗證碼：");
+        verifyField = new JTextField();
+
+        panel.add(verifyLabel);
+        panel.add(verifyField);
+
+        return panel;
+    }
 
     boolean allFilled() {
-        if (ProfileInUse.profileNickname != null && yearField.getText() != null && monthField.getText() != null && dayField.getText() != null && hourField.getText() != null && minuteField.getText() != null && licenseNumField1.getText() != null && licenseNumField2.getText() != null && cityField.getText() != null && roadField.getText() != null && locationField.getText() != null) {
+        if (ProfileInUse.profileNickname != null && yearField.getText() != null && monthField.getText() != null && dayField.getText() != null && hourField.getText() != null && minuteField.getText() != null && licenseNumField1.getText() != null && licenseNumField2.getText() != null && cityField.getText() != null && roadField.getText() != null && locationField.getText() != null && reasonField.getText() != null) {
             return true;
         } else {
             return false;
@@ -222,7 +266,7 @@ public class ContentScrollPane {
 
     void submit() {
         if (ReportPage.allFilled()) {
-            catalog.getElement();
+            /*catalog.getElement();
 
             // fill in personal information
             catalog.reporterName.sendKeys(ProfileInUse.getProfileInUse().getName());
@@ -235,7 +279,48 @@ public class ContentScrollPane {
 
 
 
+*/
+            String caseDate = yearField.getText() + "-" + monthField.getText() + "-" + dayField.getText();
+            String caseHour = hourField.getText();
+            if (caseHour.length() == 1) {
+                caseHour = "0" + caseHour;
+            }
+            String caseMinute = minuteField.getText();
+            if (caseMinute.length() == 1) {
+                caseMinute = "0" + caseMinute;
+            }
+            String licenceNum = licenseNumField1.getText() + "-" + licenseNumField2.getText();
+            String verifyCode = verifyField.getText();
 
+            String command =
+                    "const f = new FormData()\n" +
+                            "\n" +
+                            "f.append(\"name\", \"" + ProfileInUse.getProfileInUse().getName() + "\")\n" +
+                            "f.append(\"idcard\", \"" + ProfileInUse.getProfileInUse().getId() + "\")\n" +
+                            "f.append(\"tel\", \"" + ProfileInUse.getProfileInUse().getNumber() + "\")\n" +
+                            "f.append(\"email\", \"" + ProfileInUse.getProfileInUse().getEmail() + "\")\n" +
+                            "f.append(\"address2\", \"" + ProfileInUse.getProfileInUse().getAddress() + "\")\n" +
+                            "f.append(\"report_date\", \"" + caseDate + "\")\n" +
+                            "f.append(\"hour\", \"" + caseHour + "\")\n" +
+                            "f.append(\"minute\", \"" + caseMinute+ "\")\n" +
+                            "f.append(\"carcode\", \"" + licenceNum + "\")\n" +
+                            "f.append(\"district\", \"" + cityField + "\")\n" +
+                            "f.append(\"road_id\", \"" + roadField + "\")\n" +
+                            "f.append(\"address\", \"" + locationField + "\")\n" +
+                            "f.append(\"legislation2\", \"" + reasonField + "\")\n" +
+                            "f.append(\"data[]\", new Blob(['Hello World!\\n']), \"hi.txt\")\n" +
+                            "f.append(\"data[]\", \"\")\n" +
+                            "f.append(\"data[]\", \"\")\n" +
+                            "f.append(\"data[]\", \"\")\n" +
+                            "f.append(\"checknum\", \"" + verifyCode + "\")\n" +
+                            "\n" +
+                            "fetch(\"https://traffic.hchpb.gov.tw/index.php?catid=11&action=add\", {\n" +
+                            "  method: \"POST\",\n" +
+                            "  body: f\n" +
+                            "});";
+
+
+            ((JavascriptExecutor) eDriver).executeScript(command);
 
         } else {
             Notify.error("請先將所有欄位填寫完畢。");
