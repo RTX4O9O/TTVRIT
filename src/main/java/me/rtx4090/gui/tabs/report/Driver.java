@@ -11,7 +11,7 @@ public class Driver {
 
     public Driver() {
         EdgeOptions options = new EdgeOptions();
-        options.addArguments("--headless");
+        //options.addArguments("--headless");
         edgeDriver = new EdgeDriver(options);
     }
 
