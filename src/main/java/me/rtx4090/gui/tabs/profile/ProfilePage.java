@@ -3,6 +3,7 @@ package me.rtx4090.gui.tabs.profile;
 import com.google.gson.Gson;
 import me.rtx4090.Main;
 import me.rtx4090.Profile;
+import me.rtx4090.ProfileInUse;
 import me.rtx4090.Profiles;
 import me.rtx4090.gui.Notify;
 import me.rtx4090.gui.*;
@@ -278,7 +279,7 @@ public class ProfilePage implements ActionListener {
 
     void useProfile(String nickname) {
         Profile profile = profilesInstance.savedProfiles().get(nickname);
-        Main.setProfileInUse(profile);
+        ProfileInUse.setProfileInUse(profile, nickname);
         Notify.normal("使用中的檔案已切換為 " + nickname);
     }
 
