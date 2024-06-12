@@ -59,8 +59,5 @@ public class ReportPage {
         reportPanel.repaint();
     }
 
-    static boolean allFilled() {
-        return contentScrollPaneInstance.allFilled();
-    }
 
 }

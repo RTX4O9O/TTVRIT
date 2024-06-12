@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="replace old catalog with new catalog for switch">
+    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="send function done except data select">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ReportPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ReportPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,15 +159,7 @@
       <workItem from="1718039304339" duration="86000" />
       <workItem from="1718039414197" duration="86000" />
       <workItem from="1718041740082" duration="2482000" />
-      <workItem from="1718166517845" duration="1433000" />
-    </task>
-    <task id="LOCAL-00010" summary="history page finished">
-      <option name="closed" value="true" />
-      <created>1717594853735</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1717594853735</updated>
+      <workItem from="1718166517845" duration="3517000" />
     </task>
     <task id="LOCAL-00011" summary="add SubmitButton.java">
       <option name="closed" value="true" />
@@ -552,7 +545,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718167465275</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="send function done except data select">
+      <option name="closed" value="true" />
+      <created>1718168110910</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1718168110911</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,7 +597,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test JTextField" />
     <MESSAGE value="add debugging sout" />
     <MESSAGE value="make ProfilePage static" />
     <MESSAGE value="make ReportPage static" />
@@ -621,6 +621,7 @@
     <MESSAGE value="add empty api function for default case from ContentScrollPane.java" />
     <MESSAGE value="fix wrong package" />
     <MESSAGE value="replace old catalog with new catalog for switch" />
-    <option name="LAST_COMMIT_MESSAGE" value="replace old catalog with new catalog for switch" />
+    <MESSAGE value="send function done except data select" />
+    <option name="LAST_COMMIT_MESSAGE" value="send function done except data select" />
   </component>
 </project>

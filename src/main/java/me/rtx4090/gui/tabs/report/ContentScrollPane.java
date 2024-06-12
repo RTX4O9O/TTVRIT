@@ -3,9 +3,13 @@ package me.rtx4090.gui.tabs.report;
 import me.rtx4090.ProfileInUse;
 import me.rtx4090.api.*;
 import me.rtx4090.gui.Notify;
+import org.jdesktop.swingx.JXPanel;
 
 import javax.swing.*;
+import javax.swing.JFileChooser;
 
+import java.awt.*;
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.LocalDateTime;
@@ -27,7 +31,20 @@ public class ContentScrollPane {
     public Catalog catalog;
     public JButton submitButton;
     private JTextField reasonField;
-    private JTextField verifyField;
+    //private JTextField verifyField;
+    private JButton data1Button;
+    private JButton data2Button;
+    private JButton data3Button;
+    private JButton data4Button;
+    private String data1Path;
+    private String data2Path;
+    private String data3Path;
+    private String data4Path;
+    private JLabel data1Label;
+    private JLabel data2Label;
+    private JLabel data3Label;
+    private JLabel data4Label;
+    private final boolean simulateSubmit = true;
 
     ContentScrollPane(String regionCode) {
 
@@ -133,6 +150,7 @@ public class ContentScrollPane {
         panel.add(reason());
         // panel.add(verifyImageLabel);
         // panel.add(verify());
+        panel.add(fileSelector());
 
         panel.add(submitButton);
     }
@@ -237,6 +255,41 @@ public class ContentScrollPane {
 
         return panel;
     }
+    JPanel fileSelector() {
+        JXPanel panel = new JXPanel();
+
+        data1Label = new JLabel("檔案1：");
+        data2Label = new JLabel("檔案2：");
+        data3Label = new JLabel("檔案3：");
+        data4Label = new JLabel("檔案4：");
+        JPanel labelsPanel = new JPanel();
+        labelsPanel.setLayout(new BoxLayout(labelsPanel, BoxLayout.Y_AXIS));
+        labelsPanel.add(data1Label);
+        labelsPanel.add(data2Label);
+        labelsPanel.add(data3Label);
+        labelsPanel.add(data4Label);
+
+        data1Button = new JButton("選擇檔案");
+        data2Button = new JButton("選擇檔案");
+        data3Button = new JButton("選擇檔案");
+        data4Button = new JButton("選擇檔案");
+        data1Button.addActionListener(e -> selectFile(1));
+        data2Button.addActionListener(e -> selectFile(2));
+        data3Button.addActionListener(e -> selectFile(3));
+        data4Button.addActionListener(e -> selectFile(4));
+        JPanel buttonsPanel = new JPanel();
+        buttonsPanel.setLayout(new BoxLayout(buttonsPanel, BoxLayout.Y_AXIS));
+        buttonsPanel.add(data1Button);
+        buttonsPanel.add(data2Button);
+        buttonsPanel.add(data3Button);
+        buttonsPanel.add(data4Button);
+
+        panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
+        panel.add(labelsPanel);
+        panel.add(buttonsPanel);
+
+        return panel;
+    }
 
 /*    JPanel verify() throws MalformedURLException {
         JPanel panel = new JPanel();
@@ -251,6 +304,37 @@ public class ContentScrollPane {
         return panel;
     }*/
 
+    private void selectFile(int dataIndex) {
+        Frame parent = new Frame();
+        FileDialog fileDialog = new FileDialog(parent, "選擇檔案", FileDialog.LOAD);
+        fileDialog.setVisible(true);
+        String selectedFile = fileDialog.getFile();
+        if (selectedFile != null) {
+            String directory = fileDialog.getDirectory();
+            String path = directory + selectedFile;
+            switch (dataIndex) {
+                case 1:
+                    data1Path = path;
+                    data1Label.setText("檔案1：" + selectedFile);
+                    break;
+                case 2:
+                    data2Path = path;
+                    data2Label.setText("檔案2：" + selectedFile);
+                    break;
+                case 3:
+                    data3Path = path;
+                    data3Label.setText("檔案3：" + selectedFile);
+                    break;
+                case 4:
+                    data4Path = path;
+                    data4Label.setText("檔案4：" + selectedFile);
+                    break;
+            }
+            System.out.println("Selected file path: " + path);  // Log the selected file path
+        }
+        parent.dispose();
+    }
+
     boolean allFilled() {
         if (ProfileInUse.profileNickname != null && yearField.getText() != null && monthField.getText() != null && dayField.getText() != null && hourField.getText() != null && minuteField.getText() != null && licenseNumField1.getText() != null && licenseNumField2.getText() != null && cityField.getText() != null && roadField.getText() != null && locationField.getText() != null && reasonField.getText() != null) {
             return true;
@@ -258,9 +342,16 @@ public class ContentScrollPane {
             return false;
         }
     }
+    boolean fileSelected() {
+        if (data1Path != null || data2Path != null || data3Path != null || data4Path != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     void submit() {
-        if (ReportPage.allFilled()) {
+        if (allFilled() && fileSelected()) {
 
             String caseDate = yearField.getText() + "-" + monthField.getText() + "-" + dayField.getText();
             String caseHour = hourField.getText();
@@ -274,13 +365,22 @@ public class ContentScrollPane {
             String licenceNum = licenseNumField1.getText() + "-" + licenseNumField2.getText();
             //String verifyCode = verifyField.getText();
 
-            catalog.send(ProfileInUse.profileInUse.getName(), ProfileInUse.getProfileInUse().getId(), ProfileInUse.getProfileInUse().getNumber(), ProfileInUse.getProfileInUse().getEmail(), ProfileInUse.getProfileInUse().getAddress(),
-                    caseDate, caseDate, caseHour, caseMinute,
-                    licenceNum, cityField.getText(), roadField.getText(), locationField.getText(), reasonField.getText(),
-                    );
+            if (simulateSubmit) {
+                System.out.println("Submitted");
+            } else {
+                catalog.send(ProfileInUse.profileInUse.getName(),ProfileInUse.getProfileInUse().getId(), ProfileInUse.getProfileInUse().getNumber(), ProfileInUse.getProfileInUse().getEmail(), ProfileInUse.getProfileInUse().getAddress(),
+                        caseDate, caseHour, caseMinute,
+                        licenceNum, cityField.getText(), roadField.getText(), locationField.getText(), reasonField.getText(),
+                        data1Path, data2Path, data3Path, data4Path);
 
-        } else {
+            }
+
+        } else if (!allFilled() && fileSelected()) {
             Notify.error("請先將所有欄位填寫完畢。");
+        } else if (allFilled() && !fileSelected()) {
+            Notify.error("請選擇檔案。");
+        } else {
+            Notify.error("請先將所有欄位填寫完畢並選擇檔案。");
         }
 
     }
