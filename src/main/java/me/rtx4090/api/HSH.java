@@ -1,4 +1,4 @@
-package me.rtx4090.API;
+package me.rtx4090.api;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;

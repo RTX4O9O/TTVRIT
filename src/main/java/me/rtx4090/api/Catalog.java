@@ -1,4 +1,4 @@
-package me.rtx4090.API;
+package me.rtx4090.api;
 
 public abstract class Catalog {
     public abstract void send(

@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="can now submit the date after element is clicked&#10;but i couldnt figure out how to click the element">
+    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="redth 頑張れ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/API/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/api/Catalog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/API/HSH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/api/HSH.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/API.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,28 +50,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ClickTheShit.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/RTXs Lab/git/TTVRIT maven/src/main/java/me/rtx4090/reportWebsite/Catalog.java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "two.files.diff.last.used.file": "E:/RTXs Lab/git/TTVRIT maven/src/main/java/me/rtx4090/reportWebsite/Catalog.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ClickTheShit.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/RTXs Lab/git/TTVRIT maven/src/main/java/me/rtx4090/reportWebsite/Catalog.java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;E:/RTXs Lab/git/TTVRIT maven/src/main/java/me/rtx4090/reportWebsite/Catalog.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\RTXs Lab\git\TTVRIT maven\src\main\resources" />
@@ -153,23 +155,12 @@
       <workItem from="1717937961598" duration="8083000" />
       <workItem from="1717994699067" duration="8167000" />
       <workItem from="1718004147283" duration="11857000" />
-      <workItem from="1718016397173" duration="10854000" />
-    </task>
-    <task id="LOCAL-00003" summary="add normal notify">
-      <option name="closed" value="true" />
-      <created>1717396769841</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1717396769841</updated>
-    </task>
-    <task id="LOCAL-00004" summary="remove unnecessary line">
-      <option name="closed" value="true" />
-      <created>1717567334950</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1717567334950</updated>
+      <workItem from="1718016397173" duration="14760000" />
+      <workItem from="1718037301451" duration="1953000" />
+      <workItem from="1718039304339" duration="86000" />
+      <workItem from="1718039414197" duration="86000" />
+      <workItem from="1718041740082" duration="2482000" />
+      <workItem from="1718166517845" duration="392000" />
     </task>
     <task id="LOCAL-00005" summary="move example json file to resource folder">
       <option name="closed" value="true" />
@@ -547,7 +538,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718024711929</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="change ContentScrollPane.java&#10;try using api to submit report&#10;successfully load verify img">
+      <option name="closed" value="true" />
+      <created>1718027974716</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1718027974716</updated>
+    </task>
+    <task id="LOCAL-00053" summary="redth 頑張れ">
+      <option name="closed" value="true" />
+      <created>1718029219508</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1718029219508</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,6 +572,21 @@
     </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -576,8 +598,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="delete testing purpose sout" />
-    <MESSAGE value="merge with right branch" />
     <MESSAGE value="fix changing report region will cause cols increase" />
     <MESSAGE value="move profileInUse from Main to ProfileInUse.java" />
     <MESSAGE value="move profileInUse hint label to ContentScrollPane.java" />
@@ -601,6 +621,8 @@
     <MESSAGE value="rename HSH.reporterPhone to reporterNumber" />
     <MESSAGE value="testing clicking element" />
     <MESSAGE value="can now submit the date after element is clicked&#10;but i couldnt figure out how to click the element" />
-    <option name="LAST_COMMIT_MESSAGE" value="can now submit the date after element is clicked&#10;but i couldnt figure out how to click the element" />
+    <MESSAGE value="change ContentScrollPane.java&#10;try using api to submit report&#10;successfully load verify img" />
+    <MESSAGE value="redth 頑張れ" />
+    <option name="LAST_COMMIT_MESSAGE" value="redth 頑張れ" />
   </component>
 </project>
