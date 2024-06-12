@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="redth 頑張れ">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/API/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/api/Catalog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/API/HSH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/api/HSH.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/API.java" beforeDir="false" />
+    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="change report submitting method&#10;remove reportWebsite and its content&#10;rename package API to api&#10;add all classes for api">
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/api/TPH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/api/TPH.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,23 +158,7 @@
       <workItem from="1718039304339" duration="86000" />
       <workItem from="1718039414197" duration="86000" />
       <workItem from="1718041740082" duration="2482000" />
-      <workItem from="1718166517845" duration="392000" />
-    </task>
-    <task id="LOCAL-00005" summary="move example json file to resource folder">
-      <option name="closed" value="true" />
-      <created>1717567361890</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1717567361890</updated>
-    </task>
-    <task id="LOCAL-00006" summary="add report properties example json">
-      <option name="closed" value="true" />
-      <created>1717567386502</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1717567386502</updated>
+      <workItem from="1718166517845" duration="753000" />
     </task>
     <task id="LOCAL-00007" summary="change HistoryPage.java">
       <option name="closed" value="true" />
@@ -554,7 +536,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718029219508</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="change report submitting method&#10;remove reportWebsite and its content&#10;rename package API to api&#10;add all classes for api">
+      <option name="closed" value="true" />
+      <created>1718167079455</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1718167079455</updated>
+    </task>
+    <task id="LOCAL-00055" summary="change report submitting method&#10;remove reportWebsite and its content&#10;rename package API to api&#10;add all classes for api">
+      <option name="closed" value="true" />
+      <created>1718167099590</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1718167099590</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -598,7 +596,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix changing report region will cause cols increase" />
     <MESSAGE value="move profileInUse from Main to ProfileInUse.java" />
     <MESSAGE value="move profileInUse hint label to ContentScrollPane.java" />
     <MESSAGE value="update ProfileInUse logic destination" />
@@ -623,6 +620,7 @@
     <MESSAGE value="can now submit the date after element is clicked&#10;but i couldnt figure out how to click the element" />
     <MESSAGE value="change ContentScrollPane.java&#10;try using api to submit report&#10;successfully load verify img" />
     <MESSAGE value="redth 頑張れ" />
-    <option name="LAST_COMMIT_MESSAGE" value="redth 頑張れ" />
+    <MESSAGE value="change report submitting method&#10;remove reportWebsite and its content&#10;rename package API to api&#10;add all classes for api" />
+    <option name="LAST_COMMIT_MESSAGE" value="change report submitting method&#10;remove reportWebsite and its content&#10;rename package API to api&#10;add all classes for api" />
   </component>
 </project>

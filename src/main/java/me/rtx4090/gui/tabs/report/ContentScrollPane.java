@@ -1,8 +1,8 @@
 package me.rtx4090.gui.tabs.report;
 
 import me.rtx4090.ProfileInUse;
+import me.rtx4090.api.*;
 import me.rtx4090.gui.Notify;
-import me.rtx4090.reportWebsite.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -53,7 +53,7 @@ public class ContentScrollPane {
                 catalog = new TYC();
                 break;
             case "HSH":
-                catalog = new HSH(eDriver);
+                catalog = new HSH();
                 break;
             case "HSC":
                 catalog = new HSC();
@@ -107,7 +107,7 @@ public class ContentScrollPane {
                 catalog = new LNN();
                 break;
             case "DEFAULT":
-                catalog = new HSH(eDriver);
+                catalog = new Empty();
                 break;
             default:
                 throw new IllegalArgumentException("Invalid region code: " + regionCode);
@@ -231,6 +231,7 @@ public class ContentScrollPane {
         panel.add(lower);
         return panel;
     }
+
     JPanel reason() {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
@@ -302,7 +303,7 @@ public class ContentScrollPane {
                             "f.append(\"address2\", \"" + ProfileInUse.getProfileInUse().getAddress() + "\")\n" +
                             "f.append(\"report_date\", \"" + caseDate + "\")\n" +
                             "f.append(\"hour\", \"" + caseHour + "\")\n" +
-                            "f.append(\"minute\", \"" + caseMinute+ "\")\n" +
+                            "f.append(\"minute\", \"" + caseMinute + "\")\n" +
                             "f.append(\"carcode\", \"" + licenceNum + "\")\n" +
                             "f.append(\"district\", \"" + cityField + "\")\n" +
                             "f.append(\"road_id\", \"" + roadField + "\")\n" +
