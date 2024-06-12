@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="change report submitting method&#10;remove reportWebsite and its content&#10;rename package API to api&#10;add all classes for api">
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/api/TPH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/api/TPH.java" afterDir="false" />
+    <list default="true" id="312e4708-508f-4ed1-914d-15768c9e4920" name="Changes" comment="replace old catalog with new catalog for switch">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rtx4090/gui/tabs/report/ContentScrollPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,31 +158,7 @@
       <workItem from="1718039304339" duration="86000" />
       <workItem from="1718039414197" duration="86000" />
       <workItem from="1718041740082" duration="2482000" />
-      <workItem from="1718166517845" duration="753000" />
-    </task>
-    <task id="LOCAL-00007" summary="change HistoryPage.java">
-      <option name="closed" value="true" />
-      <created>1717567413282</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1717567413282</updated>
-    </task>
-    <task id="LOCAL-00008" summary="change HistoryPage.java, add ReportProperties.java&#10;enable HistoryPage.java to read properties.json and make ReportProperties.java ArrayList">
-      <option name="closed" value="true" />
-      <created>1717576373846</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1717576373846</updated>
-    </task>
-    <task id="LOCAL-00009" summary="edit HistoryPage.java">
-      <option name="closed" value="true" />
-      <created>1717576426649</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1717576426649</updated>
+      <workItem from="1718166517845" duration="1433000" />
     </task>
     <task id="LOCAL-00010" summary="history page finished">
       <option name="closed" value="true" />
@@ -552,7 +528,31 @@
       <option name="project" value="LOCAL" />
       <updated>1718167099590</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="add empty api function for default case from ContentScrollPane.java">
+      <option name="closed" value="true" />
+      <created>1718167418766</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1718167418766</updated>
+    </task>
+    <task id="LOCAL-00057" summary="fix wrong package">
+      <option name="closed" value="true" />
+      <created>1718167437910</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1718167437910</updated>
+    </task>
+    <task id="LOCAL-00058" summary="replace old catalog with new catalog for switch">
+      <option name="closed" value="true" />
+      <created>1718167465275</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1718167465275</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,9 +596,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="move profileInUse from Main to ProfileInUse.java" />
-    <MESSAGE value="move profileInUse hint label to ContentScrollPane.java" />
-    <MESSAGE value="update ProfileInUse logic destination" />
     <MESSAGE value="test JTextField" />
     <MESSAGE value="add debugging sout" />
     <MESSAGE value="make ProfilePage static" />
@@ -621,6 +618,9 @@
     <MESSAGE value="change ContentScrollPane.java&#10;try using api to submit report&#10;successfully load verify img" />
     <MESSAGE value="redth 頑張れ" />
     <MESSAGE value="change report submitting method&#10;remove reportWebsite and its content&#10;rename package API to api&#10;add all classes for api" />
-    <option name="LAST_COMMIT_MESSAGE" value="change report submitting method&#10;remove reportWebsite and its content&#10;rename package API to api&#10;add all classes for api" />
+    <MESSAGE value="add empty api function for default case from ContentScrollPane.java" />
+    <MESSAGE value="fix wrong package" />
+    <MESSAGE value="replace old catalog with new catalog for switch" />
+    <option name="LAST_COMMIT_MESSAGE" value="replace old catalog with new catalog for switch" />
   </component>
 </project>

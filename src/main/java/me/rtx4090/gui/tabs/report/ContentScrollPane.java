@@ -3,10 +3,6 @@ package me.rtx4090.gui.tabs.report;
 import me.rtx4090.ProfileInUse;
 import me.rtx4090.api.*;
 import me.rtx4090.gui.Notify;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import javax.swing.*;
 
@@ -18,8 +14,6 @@ public class ContentScrollPane {
     JPanel panel = new JPanel();
     public JScrollPane scrollPane = new JScrollPane(panel);
 
-    Driver driver = new Driver();
-    WebDriver eDriver = driver.edgeDriver;
     private JTextField yearField;
     private JTextField minuteField;
     private JTextField hourField;
@@ -127,18 +121,18 @@ public class ContentScrollPane {
 
         JLabel profileInUse = new JLabel("目前使用身分：" + ProfileInUse.profileNickname);
 
-        WebElement imgElement = eDriver.findElement(By.className("captcha_img"));
+/*        WebElement imgElement = eDriver.findElement(By.className("captcha_img"));
         String imgSrc = imgElement.getAttribute("src");
         ImageIcon verifyImage = new ImageIcon(new URL(imgSrc));
-        JLabel verifyImageLabel = new JLabel(verifyImage);
+        JLabel verifyImageLabel = new JLabel(verifyImage);*/
 
         panel.add(profileInUse);
         panel.add(caseTime());
         panel.add(licenseNum());
         panel.add(location());
         panel.add(reason());
-        panel.add(verifyImageLabel);
-        panel.add(verify());
+        // panel.add(verifyImageLabel);
+        // panel.add(verify());
 
         panel.add(submitButton);
     }
@@ -244,7 +238,7 @@ public class ContentScrollPane {
         return panel;
     }
 
-    JPanel verify() throws MalformedURLException {
+/*    JPanel verify() throws MalformedURLException {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
 
@@ -255,7 +249,7 @@ public class ContentScrollPane {
         panel.add(verifyField);
 
         return panel;
-    }
+    }*/
 
     boolean allFilled() {
         if (ProfileInUse.profileNickname != null && yearField.getText() != null && monthField.getText() != null && dayField.getText() != null && hourField.getText() != null && minuteField.getText() != null && licenseNumField1.getText() != null && licenseNumField2.getText() != null && cityField.getText() != null && roadField.getText() != null && locationField.getText() != null && reasonField.getText() != null) {
@@ -267,20 +261,7 @@ public class ContentScrollPane {
 
     void submit() {
         if (ReportPage.allFilled()) {
-            /*catalog.getElement();
 
-            // fill in personal information
-            catalog.reporterName.sendKeys(ProfileInUse.getProfileInUse().getName());
-            catalog.reporterID.sendKeys(ProfileInUse.getProfileInUse().getId());
-            catalog.reporterEmail.sendKeys(ProfileInUse.getProfileInUse().getEmail());
-            catalog.reporterNumber.sendKeys(ProfileInUse.getProfileInUse().getNumber());
-            catalog.reporterAddress.sendKeys(ProfileInUse.getProfileInUse().getAddress());
-
-            // fill in case information **BASED ON HSH**
-
-
-
-*/
             String caseDate = yearField.getText() + "-" + monthField.getText() + "-" + dayField.getText();
             String caseHour = hourField.getText();
             if (caseHour.length() == 1) {
@@ -291,37 +272,12 @@ public class ContentScrollPane {
                 caseMinute = "0" + caseMinute;
             }
             String licenceNum = licenseNumField1.getText() + "-" + licenseNumField2.getText();
-            String verifyCode = verifyField.getText();
+            //String verifyCode = verifyField.getText();
 
-            String command =
-                    "const f = new FormData()\n" +
-                            "\n" +
-                            "f.append(\"name\", \"" + ProfileInUse.getProfileInUse().getName() + "\")\n" +
-                            "f.append(\"idcard\", \"" + ProfileInUse.getProfileInUse().getId() + "\")\n" +
-                            "f.append(\"tel\", \"" + ProfileInUse.getProfileInUse().getNumber() + "\")\n" +
-                            "f.append(\"email\", \"" + ProfileInUse.getProfileInUse().getEmail() + "\")\n" +
-                            "f.append(\"address2\", \"" + ProfileInUse.getProfileInUse().getAddress() + "\")\n" +
-                            "f.append(\"report_date\", \"" + caseDate + "\")\n" +
-                            "f.append(\"hour\", \"" + caseHour + "\")\n" +
-                            "f.append(\"minute\", \"" + caseMinute + "\")\n" +
-                            "f.append(\"carcode\", \"" + licenceNum + "\")\n" +
-                            "f.append(\"district\", \"" + cityField + "\")\n" +
-                            "f.append(\"road_id\", \"" + roadField + "\")\n" +
-                            "f.append(\"address\", \"" + locationField + "\")\n" +
-                            "f.append(\"legislation2\", \"" + reasonField + "\")\n" +
-                            "f.append(\"data[]\", new Blob(['Hello World!\\n']), \"hi.txt\")\n" +
-                            "f.append(\"data[]\", \"\")\n" +
-                            "f.append(\"data[]\", \"\")\n" +
-                            "f.append(\"data[]\", \"\")\n" +
-                            "f.append(\"checknum\", \"" + verifyCode + "\")\n" +
-                            "\n" +
-                            "fetch(\"https://traffic.hchpb.gov.tw/index.php?catid=11&action=add\", {\n" +
-                            "  method: \"POST\",\n" +
-                            "  body: f\n" +
-                            "});";
-
-
-            ((JavascriptExecutor) eDriver).executeScript(command);
+            catalog.send(ProfileInUse.profileInUse.getName(), ProfileInUse.getProfileInUse().getId(), ProfileInUse.getProfileInUse().getNumber(), ProfileInUse.getProfileInUse().getEmail(), ProfileInUse.getProfileInUse().getAddress(),
+                    caseDate, caseDate, caseHour, caseMinute,
+                    licenceNum, cityField.getText(), roadField.getText(), locationField.getText(), reasonField.getText(),
+                    );
 
         } else {
             Notify.error("請先將所有欄位填寫完畢。");
